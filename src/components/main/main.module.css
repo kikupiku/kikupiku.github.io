@@ -1,0 +1,27 @@
+.Main {
+  position: relative;
+  font-family: 'Volkhov', serif;
+  color: #1B494B;
+}
+
+.Title {
+  position: relative;
+  font-size: 9.53vw;
+  z-index: 9999;
+}
+
+.SecondaryTitle {
+  color: white;
+  font-size: 3.28vw;
+}
+
+.Pic {
+  position: absolute;
+  width: 28vw;
+  height: auto;
+  top: 5.95vw;
+  left: 54.75vw;
+  border-radius: 12px;
+  transform: rotate(10.42deg);
+  z-index: 1;
+}
