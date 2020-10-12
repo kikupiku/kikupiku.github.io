@@ -1,0 +1,48 @@
+.Container {
+  width: 90vw;
+  height: 80px;
+  position: relative;
+  border: 1px solid green;
+  margin-bottom: 50px;
+  position: sticky;
+  top: 0;
+  z-index: 9999999;
+  background-color: #c4dec1;
+}
+
+.Menu {
+  width: 50%;
+  right: 5.7vw;
+  height: 30px;
+  padding-top: 42px;
+  margin-bottom: 92px;
+}
+
+ul {
+  list-style-type: none;
+  display: flex;
+  height: 25px;
+  width: 100%;
+  justify-content: space-between;
+  align-items: middle;
+  border: 2px solid orange;
+}
+
+.Link {
+  color: #1B494B;
+  font-family: 'DM Sans', sans-serif;
+  text-decoration: none;
+  height: 25px;
+  border: 1px solid green;
+  display: inline-block;
+}
+
+.Link:hover {
+  text-decoration: underline;
+}
+
+.ModeToggleCircle {
+  position: relative;
+  left: -22px;
+  top: -2px;
+}

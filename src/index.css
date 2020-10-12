@@ -21,3 +21,9 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+h2 {
+  font-family: 'Volkhov', serif;
+  font-size: 4.84vw;
+  color: #1B494B;
+}

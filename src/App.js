@@ -1,26 +1,19 @@
 import React from 'react';
-import { BrowserRouter, Link } from 'react-router-dom';
+import { BrowserRouter } from 'react-router-dom';
 import styles from './App.module.css';
 import Main from './components/main/main';
+import About from './components/about/about';
+import Menu from './components/menu/menu';
 
 function App() {
   return (
     <BrowserRouter>
       <div className={styles.App}>
-        <ul>
-          <li><Link className={styles.Link} to='/'>Home</Link></li>
-          <li><Link to='/'>About</Link></li>
-          {/* <li><Link to={‌{
-            pathname: '/',
-            hash: '#Skills'
-          }}>Skills</Link></li> */}
-          <li><Link to='/'>Projects</Link></li>
-          <li><Link to='/'>Contact</Link></li>
-        </ul>
+        <Menu />
         <Main />
+        <About />
       </div>
     </BrowserRouter>
-    
   );
 }
 

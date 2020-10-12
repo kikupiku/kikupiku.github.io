@@ -1,20 +1,14 @@
 .App {
-  background-color: #C9D9C2;
+  background-color: #c4dec1;
   height: 100vh;
-  width: 100vw;
+  width: 94.3vw;
   position: relative;
-  padding-left: 73px;
+  padding-left: 5.7vw;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
-.Link {
-  color: #1B494B;
-  font-family: 'DM Sans', sans-serif;
-  text-decoration: none;
-}
 
-.Link:hover {
-  text-decoration: underline;
-}
 
 
 @media (prefers-reduced-motion: no-preference) {
