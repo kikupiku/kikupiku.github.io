@@ -2,8 +2,8 @@
   position: relative;
   font-family: 'Volkhov', serif;
   color: #1B494B;
-  height: 430.47px;
   max-width: 100%;
+  margin-bottom: 7.8vw;
 }
 
 .Title {
@@ -31,7 +31,7 @@
 }
 
 .Arrow {
-  width: 10vw;
+  width: 8vw;
   height: auto;
   margin-top: 50px;
 }

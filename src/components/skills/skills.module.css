@@ -1,0 +1,14 @@
+h2 {
+  margin-bottom: 47px;
+}
+
+p {
+  margin-bottom: 16px;
+}
+
+.SkillContainer {
+  border: 1px solid red;
+  height: 78px;
+  display: flex;
+  margin-bottom: 48px;
+}

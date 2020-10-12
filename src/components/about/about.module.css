@@ -1,20 +1,20 @@
-h2 {
-  
+.AboutContainer {
+  display: flex;
+  justify-content: space-between;
+  padding-right: 4vw;
+  margin-bottom: 15px;
 }
 
 p {
   width: 45vw;
   max-width: 100%;
   height: auto;
-  font-family: 'DM Sans', sans-serif;
-  color: white;
-  font-size: 2.03vw;
 }
 
 .Arrow {
   transform: rotate(200deg) scaleY(-1);
-  width: 10vw;
+  width: 8vw;
   height: auto;
   position: relative;
-  left: 34vw;
+  left: 31vw;
 }
