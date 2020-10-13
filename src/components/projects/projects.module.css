@@ -1,0 +1,57 @@
+h2 {
+  width: 19vw;
+  margin: 0 auto;
+}
+
+p {
+  text-align: center;
+}
+
+.NameContainer {
+  display: flex;
+  width: 50vw;
+  margin: 0 auto;
+  justify-content: space-between;
+}
+
+
+.PrevArrow {
+  width: 5.1vw;
+  height: auto;
+}
+
+.NextArrow {
+  width: 5.1vw;
+  transform: rotate(180deg);
+  height: auto;
+}
+
+.LinksContainer {
+  display: flex;
+  width: 23vw;
+  margin: 0 auto;
+  justify-content: space-between;
+  margin-bottom: 4.3vw;
+}
+
+.Link {
+  width: 11vw;
+  height: 3.1vw;
+  border-radius: 40px;
+  background-color: #1B494B;
+  font-family: 'DM Sans', sans-serif;
+  text-decoration: none;
+  color: #C9D9C2;
+  text-align: center;
+  line-height: 2.1;
+  font-size: 1.5vw;
+}
+
+.Arrow {
+  transform: rotate(175deg) scaleY(-1);
+  width: 8vw;
+  height: auto;
+  margin: 0 auto;
+  position: relative;
+  left: 38vw;
+}

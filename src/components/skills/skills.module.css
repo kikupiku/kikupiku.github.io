@@ -1,3 +1,7 @@
+.SkillsComponent {
+  margin-bottom: 8vw;
+}
+
 h2 {
   margin-bottom: 47px;
 }
@@ -6,9 +10,30 @@ p {
   margin-bottom: 16px;
 }
 
-.SkillContainer {
-  border: 1px solid red;
-  height: 78px;
+.SkillsContainer {
+  position: relative;
+  height: 7.1vw;
   display: flex;
   margin-bottom: 48px;
+  margin-right: 5.7vw;
+  justify-content: left;
+}
+
+.SkillsContainer:hover {
+  cursor: url('../../assets/cursor.png'), pointer;
+}
+
+.Icon {
+  width: 85%;
+  height: auto;
+  vertical-align: middle;
+  margin: 0 auto;
+}
+
+.Arrow {
+  transform: rotate(145deg) scaleY(-1);
+  width: 8vw;
+  height: auto;
+  position: relative;
+  left: 35vw;
 }

@@ -1,14 +1,22 @@
+.About {
+  margin-bottom: 5vw;
+}
+
 .AboutContainer {
   display: flex;
   justify-content: space-between;
   padding-right: 4vw;
-  margin-bottom: 15px;
+}
+
+h2 {
+  flex: 5;
 }
 
 p {
   width: 45vw;
   max-width: 100%;
   height: auto;
+  flex: 6;
 }
 
 .Arrow {
@@ -16,5 +24,5 @@ p {
   width: 8vw;
   height: auto;
   position: relative;
-  left: 31vw;
+  left: 26vw;
 }

@@ -4,7 +4,7 @@ import arrow from '../../assets/arrow.png';
 
 const about = props => {
   return (
-    <div>
+    <div className={styles.About}>
       <div className={styles.AboutContainer}>
         <h2>About me</h2>
         <p>

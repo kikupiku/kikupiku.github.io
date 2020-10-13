@@ -5,6 +5,7 @@ import Main from './components/main/main';
 import About from './components/about/about';
 import Menu from './components/menu/menu';
 import Skills from './components/skills/skills';
+import Projects from './components/projects/projects';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Main />
         <About />
         <Skills />
+        <Projects />
       </div>
     </BrowserRouter>
   );

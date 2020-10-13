@@ -1,0 +1,17 @@
+.SkillContainer {
+  background-color: white;
+  border-radius: 12px;
+  height: 100%;
+  width: 7.1vw;
+  margin-right: 2.2vw;
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  position: relative;
+  bottom: 0;
+  transition: bottom 0.5s;
+}
+
+.SkillContainer:hover {
+  bottom: 20px;
+}
