@@ -1,4 +1,8 @@
-h2 {
+.ProjectsComponent {
+  margin-bottom: 8vw;
+}
+
+.Projects {
   width: 19vw;
   margin: 0 auto;
 }

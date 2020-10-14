@@ -1,0 +1,125 @@
+.WhenIDontCode {
+  margin-bottom: 15.6vw;
+}
+
+.Title {
+  width: 71vw;
+  margin: 0 auto 7.1vw auto;
+}
+
+.HobbiesContainer {
+  width: 53vw;
+  height: auto;
+  margin: 0 auto;
+}
+
+.Calligraphy,
+.Singing,
+.Crafts,
+.Painting {
+  border-radius: 12px;
+  position: relative;
+  display: inline-block;
+  transform-style: preserve-3d;
+}
+
+.Calligraphy {
+  width: 27.6vw;
+  height: 14.5vw;
+  bottom: 1.7vw;
+  left: 1vw;
+  z-index: 9;
+  background: url('../../assets/hobbies/calligraphy.JPG') center center no-repeat;
+  background-size: 100% 100%;
+}
+
+.Singing {
+  width: 25.3vw;
+  height: 15vw;
+  z-index: 8;
+  background: url('../../assets/hobbies/singing.jpg') center center no-repeat;
+  background-size: 100% 100%;
+}
+
+.Painting {
+  width: 26.3vw;
+  height: 17.8vw;
+  bottom: 6.8vw;
+  left: 6vw;
+  background: url('../../assets/hobbies/painting.JPG') center center no-repeat;
+  background-size: 100% 100%;
+}
+
+.Crafts {
+  width: 14.9vw;
+  height: 14.9vw;
+  bottom: 3.2vw;
+  left: 2.7vw;
+  background: url('../../assets/hobbies/crafts.jpg') center center no-repeat;
+  background-size: 100% 100%;
+}
+
+.Calligraphy::before,
+.Painting::before,
+.Crafts::before {
+  display: inline-block;
+  content: '';
+  position: absolute;
+  background-color: #1B494B;
+  z-index: -1;
+  transform: translateZ(-1px);
+}
+
+.Calligraphy::before {
+  border-radius: 12px 0 0 12px;
+  width: 6.6vw;
+  height: 15.8vw;
+  right: 22.6vw;
+  top: 2.2vw;
+}
+
+.Painting::before {
+  border-radius: 12px 0 0 12px;
+  width: 100%;
+  height: 15.8vw;
+  right: 1.5vw;
+  top: 6.8vw;
+}
+
+.Crafts::before {
+  width: 100%;
+  height: 6.7vw;
+  border-radius: 0 0 12px 12px;
+  right: 1.5vw;
+  top: 12.2vw;
+}
+
+.Calligraphy::after,
+.Singing::after,
+.Painting::after,
+.Crafts::after {
+  position: absolute;
+  color: white;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 2vw;
+}
+
+.Calligraphy::after {
+  content: 'Calligraphy';
+  bottom: 15.3vw;
+}
+
+.Singing::after {
+  content: 'Singing';
+  bottom: 16.3vw;
+}
+
+.Painting::after {
+  content: 'Painting';
+  top: 19vw;
+}
+
+.Crafts::after {
+  content: 'Crafts';
+  top: 15.5vw;
+}

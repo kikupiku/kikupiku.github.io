@@ -27,7 +27,7 @@ const skills = props => {
 
   return (
     <div className={styles.SkillsComponent}>
-      <h2>Skills</h2>
+      <h2 className={styles.Skills}>Skills</h2>
       <p>front-end</p>
       <div className={styles.SkillsContainer + ' ' + styles.Frontend}>
         {frontendSkills}
