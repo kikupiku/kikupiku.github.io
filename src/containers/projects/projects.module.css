@@ -4,6 +4,39 @@
 
 .Projects {
   width: 19vw;
+  margin: 0 auto 3.6vw auto;
+}
+
+.ProjGifs {
+  display: flex;
+  margin-bottom: 1.8vw;
+}
+
+.PrevProj,
+.NextProj {
+  width: 26.5vw;
+  height: 26.5vw;
+  border-radius: 12px;
+}
+
+.PrevProj {
+  transform: rotate(-19.07deg);
+  position: relative;
+  right: 9vw;
+  top: 9vw;
+}
+
+.NextProj {
+  transform: rotate(18.07deg);
+  position: relative;
+  left: 9vw;
+  top: 9vw;
+}
+
+.CurrentProj {
+  width: 38.2vw;
+  height: 38.2vw;
+  border-radius: 12px;
   margin: 0 auto;
 }
 
