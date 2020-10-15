@@ -5,7 +5,7 @@ import Main from './components/main/main';
 import About from './components/about/about';
 import Menu from './components/menu/menu';
 import Skills from './components/skills/skills';
-import Projects from './components/projects/projects';
+import Projects from './containers/projects/projects';
 import WhenIDontCode from './components/widwidc/widwidc';
 import Contact from './components/contact/contact';
 

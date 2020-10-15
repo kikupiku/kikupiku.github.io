@@ -1,0 +1,64 @@
+.Contact {
+  background-color: #1B494B;
+  width: 100vw;
+  position: relative;
+  right: 5.7vw;
+}
+
+.Title {
+  width: 18.2vw;
+  padding-top: 12.4vw;
+  margin: 0 auto 3.4vw auto;
+  color: white;
+}
+
+.ContactLinks {
+  padding-bottom: 9vw;
+}
+
+.Email,
+.Github,
+.Linkedin,
+.CV {
+  display: flex;
+  width: auto;
+  text-align: center;
+  padding-bottom: 3.9vw;
+  align-items: center;
+  justify-content: center;
+}
+
+.Email:hover,
+.Github:hover,
+.Linkedin:hover,
+.CV:hover {
+  text-decoration: underline;
+}
+
+.Email h4 {
+  margin-right: 4vw;
+}
+
+.Github h4,
+.Linkedin h4,
+.CV h4 {
+  margin-right: 2vw;
+}
+
+.Email {
+  color: white;
+}
+
+.Github a,
+.CV a {
+  color: #c4dec1;
+}
+
+.GithubArrow,
+.CVArrow {
+  filter: brightness(0) saturate(100%) invert(95%) sepia(6%) saturate(900%) hue-rotate(61deg) brightness(93%) contrast(89%);
+}
+
+.Linkedin {
+  color: white;
+}
