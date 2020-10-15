@@ -6,9 +6,9 @@ import Skill from '../UI/skill/skill';
 import { frontendImages, backendImages, otherImages } from './skillIndex';
 
 function getSkills(images, skills) {
-  images.map(({ id, source }) => {
+  images.map(({ id, source, name }) => {
     skills.push(
-      <Skill className={styles.Skill} key={id}>
+      <Skill dataLine={name} className={styles.Skill} key={id}>
         <img className={styles.Icon} src={source} alt='' />
       </Skill>
     );

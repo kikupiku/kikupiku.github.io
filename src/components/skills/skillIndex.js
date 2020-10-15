@@ -15,6 +15,7 @@ function gatherImages(skillNames, images, type) {
     images.push({
       id: index + 1,
       source: process.env.PUBLIC_URL + `skills/${type}/${skill}.png`,
+      name: skill
     });
   });
 }

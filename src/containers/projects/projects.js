@@ -18,7 +18,7 @@ const projects = props => {
         <div className={styles.Next}></div>
         <div className={styles.NameContainer}>
           <img className={styles.PrevArrow} src={carouselArrow} alt='' />
-          <p>{projectName}</p>
+          <p className={styles.ProjectName}>{projectName}</p>
           <img className={styles.NextArrow} src={carouselArrow} alt='' />
         </div>
         <div className={styles.LinksContainer}>

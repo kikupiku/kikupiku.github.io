@@ -24,6 +24,10 @@ p {
   cursor: url('../../assets/cursor.png'), pointer;
 }
 
+.Skill::before {
+  content: attr(data-line);
+}
+
 .Icon {
   width: 85%;
   height: auto;
