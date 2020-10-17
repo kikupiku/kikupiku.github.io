@@ -5,7 +5,7 @@ import arrow from '../../assets/arrow.png';
 
 const main = props => {
   return (
-    <div className={styles.Main}>
+    <div id='main' className={styles.Main}>
       <img className={styles.Pic} src={katarzynapic} alt='' />
       <h1 className={styles.Title}>
         Katarzyna

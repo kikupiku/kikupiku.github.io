@@ -26,7 +26,7 @@ const skills = props => {
   getSkills(otherImages, otherSkills);
 
   return (
-    <div className={styles.SkillsComponent}>
+    <div id='skills' className={styles.SkillsComponent}>
       <h2 className={styles.Skills}>Skills</h2>
       <p>front-end</p>
       <div className={styles.SkillsContainer + ' ' + styles.Frontend}>

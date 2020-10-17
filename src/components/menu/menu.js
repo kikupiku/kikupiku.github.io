@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 
 import styles from './menu.module.css';
 
@@ -9,33 +8,33 @@ const menu = props => {
       <div className={styles.Menu}>
         <ul>
           <li>
-            <Link className={styles.Link} to='/'>
+            <a href='#main' className={styles.Link} to='/'>
               Home
-            </Link>
+            </a>
           </li>
           <li>
-            <Link className={styles.Link} to='/'>
+            <a href='#about' className={styles.Link} to='/'>
               About
-            </Link>
+            </a>
           </li>
           <li>
-            <Link className={styles.Link} to='/'>
+            <a href='#skills' className={styles.Link} to='/'>
               Skills
-            </Link>
+            </a>
           </li>
           {/* <li><Link to={‌{
               pathname: '/',
               hash: '#Skills'
             }}>Skills</Link></li> */}
           <li>
-            <Link className={styles.Link + ' ' + styles.ModeBox} to='/'>
+            <a href='#projects' className={styles.Link + ' ' + styles.ModeBox} to='/'>
               Projects
-            </Link>
+            </a>
           </li>
           <li>
-            <Link className={styles.Link} to='/'>
+            <a href='#contact' className={styles.Link} to='/'>
               Contact
-            </Link>
+            </a>
           </li>
           <li>
             <div className={styles.Link}>

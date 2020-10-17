@@ -1,10 +1,10 @@
 .Container {
   width: 90vw;
-  height: 80px;
+  height: 10.25vw;
   position: relative;
   border: 1px solid green;
   margin-bottom: 50px;
-  position: sticky;
+  position: fixed;
   top: 0;
   z-index: 9999999;
   background-color: #c4dec1;
@@ -13,9 +13,8 @@
 .Menu {
   width: 50%;
   right: 5.7vw;
-  height: 30px;
-  padding-top: 42px;
-  margin-bottom: 92px;
+  height: 2.3vw;
+  padding-top: 3.5vw;
 }
 
 ul {

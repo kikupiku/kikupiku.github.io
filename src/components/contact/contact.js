@@ -5,7 +5,7 @@ import linkArrow from '../../assets/linkArrow.svg';
 
 const contact = props => {
   return (
-    <div className={styles.Contact}>
+    <div id='contact' className={styles.Contact}>
       <h2 className={styles.Title}>Contact</h2>
       <div className={styles.ContactLinks}>
         <div className={styles.Email}>

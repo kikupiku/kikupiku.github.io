@@ -64,7 +64,7 @@ const Projects = props => {
   }
 
   return (
-    <div className={styles.ProjectsComponent}>
+    <div id='projects' className={styles.ProjectsComponent}>
       <h2 className={styles.Projects}>Projects</h2>
       <div className={styles.CarouselContainer}>
         <div className={styles.ProjGifs}>
