@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styles from './App.module.css';
 import Main from './components/main/main';
 import About from './components/about/about';
@@ -8,7 +8,8 @@ import Projects from './containers/projects/projects';
 import WhenIDontCode from './components/widwidc/widwidc';
 import Contact from './components/contact/contact';
 
-function App() {
+const App = () => {
+
   return (
     <div className={styles.App}>
       <Menu />

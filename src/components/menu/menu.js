@@ -22,12 +22,12 @@ const menu = props => {
               Skills
             </a>
           </li>
-          {/* <li><Link to={‌{
-              pathname: '/',
-              hash: '#Skills'
-            }}>Skills</Link></li> */}
           <li>
-            <a href='#projects' className={styles.Link + ' ' + styles.ModeBox} to='/'>
+            <a
+              href='#projects'
+              className={styles.Link + ' ' + styles.ModeBox}
+              to='/'
+            >
               Projects
             </a>
           </li>
@@ -37,28 +37,12 @@ const menu = props => {
             </a>
           </li>
           <li>
-            <div className={styles.Link}>
-              Mode
-              <svg
-                className={styles.ModeToggleCircle}
-                width='48'
-                height='24'
-                viewBox='0 0 48 24'
-                fill='none'
-                xmlns='http://www.w3.org/2000/svg'
-              >
-                <rect width='48' height='24' rx='12' fill='#1B494B' />
-              </svg>
-              <svg
-                className={styles.ModeToggleCircle}
-                width='20'
-                height='20'
-                viewBox='0 0 20 20'
-                fill='none'
-                xmlns='http://www.w3.org/2000/svg'
-              >
-                <circle cx='10' cy='10' r='10' fill='#C9D9C2' />
-              </svg>
+            <div className={styles.Link + ' ' + styles.Mode}>Mode</div>
+          </li>
+          <li>
+            <div className={styles.ToggleContainer}>
+              <div className={styles.Toggle}></div>
+            <div className={styles.ToggleCircle}></div>
             </div>
           </li>
         </ul>
