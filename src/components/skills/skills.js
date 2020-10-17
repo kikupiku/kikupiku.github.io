@@ -1,11 +1,13 @@
 import React from 'react';
 
 import styles from './skills.module.css';
-import arrow from '../../assets/arrow.png';
+import arrowLight from '../../assets/arrow-light.png';
+import arrowDark from '../../assets/arrow-dark.png';
 import Skill from '../UI/skill/skill';
 import { frontendImages, backendImages, otherImages } from './skillIndex';
 
 function getSkills(images, skills) {
+
   images.map(({ id, source, name }) => {
     skills.push(
       <Skill dataLine={name} className={styles.Skill} key={id}>
@@ -17,6 +19,8 @@ function getSkills(images, skills) {
 }
 
 const skills = props => {
+  const arrow = props.mode === 'light' ? arrowLight : arrowDark;
+
   const frontendSkills = [];
   const backendSkills = [];
   const otherSkills = [];
@@ -27,7 +31,7 @@ const skills = props => {
 
   return (
     <div id='skills' className={styles.SkillsComponent}>
-      <h2 className={styles.Skills}>Skills</h2>
+      <h2 mode={props.mode} className={styles.Skills + ' text'}>Skills</h2>
       <p>front-end</p>
       <div className={styles.SkillsContainer + ' ' + styles.Frontend}>
         {frontendSkills}

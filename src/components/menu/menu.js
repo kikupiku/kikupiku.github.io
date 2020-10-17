@@ -4,45 +4,77 @@ import styles from './menu.module.css';
 
 const menu = props => {
   return (
-    <div className={styles.Container}>
+    <div mode={props.mode} className={styles.Container + ' background'}>
       <div className={styles.Menu}>
         <ul>
           <li>
-            <a href='#main' className={styles.Link} to='/'>
+            <a
+              mode={props.mode}
+              href='#main'
+              className={styles.Link + ' text'}
+              to='/'
+            >
               Home
             </a>
           </li>
           <li>
-            <a href='#about' className={styles.Link} to='/'>
+            <a
+              mode={props.mode}
+              href='#about'
+              className={styles.Link + ' text'}
+              to='/'
+            >
               About
             </a>
           </li>
           <li>
-            <a href='#skills' className={styles.Link} to='/'>
+            <a
+              mode={props.mode}
+              href='#skills'
+              className={styles.Link + ' text'}
+              to='/'
+            >
               Skills
             </a>
           </li>
           <li>
             <a
+              mode={props.mode}
               href='#projects'
-              className={styles.Link + ' ' + styles.ModeBox}
+              className={styles.Link + ' text'}
               to='/'
             >
               Projects
             </a>
           </li>
           <li>
-            <a href='#contact' className={styles.Link} to='/'>
+            <a
+              mode={props.mode}
+              href='#contact'
+              className={styles.Link + ' text'}
+              to='/'
+            >
               Contact
             </a>
           </li>
           <li>
-            <div className={styles.Link + ' ' + styles.Mode}>Mode</div>
+            <div
+              mode={props.mode}
+              className={styles.Link + ' ' + styles.Mode + ' text'}
+            >
+              Mode
+            </div>
           </li>
           <li>
             <div className={styles.ToggleContainer}>
-              <div className={styles.Toggle}></div>
-            <div className={styles.ToggleCircle}></div>
+              <div
+                mode={props.mode}
+                className={styles.Toggle + ' secondaryBackground'}
+              ></div>
+              <div
+                mode={props.mode}
+                className={styles.ToggleCircle + ' background'}
+              ></div>
             </div>
           </li>
         </ul>

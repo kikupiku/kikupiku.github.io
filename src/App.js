@@ -9,16 +9,17 @@ import WhenIDontCode from './components/widwidc/widwidc';
 import Contact from './components/contact/contact';
 
 const App = () => {
+  const [mode, setMode] = useState('dark');
 
   return (
-    <div className={styles.App}>
-      <Menu />
-      <Main />
-      <About />
-      <Skills />
-      <Projects />
-      <WhenIDontCode />
-      <Contact />
+    <div mode={mode} className={styles.App + ' background'}>
+      <Menu mode={mode} />
+      <Main mode={mode} />
+      <About mode={mode} />
+      <Skills mode={mode} />
+      <Projects mode={mode} />
+      <WhenIDontCode mode={mode} />
+      <Contact mode={mode} />
     </div>
   );
 }

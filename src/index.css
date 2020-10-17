@@ -30,7 +30,6 @@ code {
 h2 {
   font-family: 'Volkhov', serif;
   font-size: 4.84vw;
-  color: #1B494B;
 }
 
 p {
@@ -43,4 +42,28 @@ h4 {
   font-family: 'DM Sans', sans-serif;
   font-size: 4vw;
   line-height: 5.3vw;
+}
+
+.text[mode='light'] {
+  color: #1B4C4C;
+}
+
+.text[mode='dark'] {
+  color: #C4DEC1;
+}
+
+.background[mode='light'] {
+  background-color: #C4DEC1; 
+}
+
+.background[mode='dark'] {
+  background-color:  #1B4C4C;
+}
+
+.secondaryBackground[mode='light'] {
+  background-color:  #1B4C4C; 
+}
+
+.secondaryBackground[mode='dark'] {
+  background-color: #C4DEC1;
 }
