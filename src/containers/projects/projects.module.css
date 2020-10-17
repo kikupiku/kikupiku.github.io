@@ -288,16 +288,23 @@
 }
 
 .Link {
-  width: 11vw;
+  width: 10.5vw;
   height: 3.1vw;
   border-radius: 40px;
   background-color: #1B494B;
   font-family: 'DM Sans', sans-serif;
   text-decoration: none;
-  color: #C9D9C2;
+  color: #c4dec1;
   text-align: center;
   line-height: 2.1;
   font-size: 1.5vw;
+  border: 2px solid #1B494B;
+}
+
+.Link:hover {
+  border: 2px solid #1B494B;
+  color: #1B494B;
+  background-color: #c4dec1;
 }
 
 .Arrow {
