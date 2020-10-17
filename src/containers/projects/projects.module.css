@@ -1,5 +1,6 @@
 .ProjectsComponent {
   margin-bottom: 8vw;
+  position: relative;
 }
 
 .Projects {
@@ -9,7 +10,28 @@
 
 .ProjGifs {
   display: flex;
+  height: 38.2vw;
   margin-bottom: 1.8vw;
+}
+
+.EarlierProj,
+.LaterProj {
+  position: absolute;
+  border-radius: 12px;
+  width: 13.5vw;
+  height: 13.5vw;
+}
+
+.EarlierProj {
+  transform: rotate(-36.07deg);
+  left: -23vw;
+  top: 40vw;
+}
+
+.LaterProj {
+  transform: rotate(36.07deg);
+  top: 30vw;
+  right: -25vw;
 }
 
 .PrevProj,
@@ -34,10 +56,183 @@
 }
 
 .CurrentProj {
+  position: relative;
   width: 38.2vw;
   height: 38.2vw;
   border-radius: 12px;
   margin: 0 auto;
+  top: 0;
+  left: 0;
+}
+
+.EarlierProj[goforward='1'] {
+  animation: earlGoForward 0.3s 1;
+}
+
+.PrevProj[goforward='1'] {
+  animation: prevGoForward 0.3s 1;
+}
+
+.CurrentProj[goforward='1'] {
+  animation: currGoForward 0.3s 1;
+}
+
+.NextProj[goforward='1'] {
+  animation: nextGoForward 0.3s 1;
+}
+
+@keyframes earlGoForward {
+  0% {
+    transform: rotate(-36.07deg);
+    left: -23vw;
+    top: 40vw;
+    width: 13.5vw;
+    height: 13.5vw;
+  }
+  100% {
+    transform: rotate(-19.07deg);
+    left: -8.5vw;
+    top: 18.5vw;
+    width: 26.5vw;
+    height: 26.5vw;
+  }
+}
+
+@keyframes prevGoForward {
+  0% {
+    transform: rotate(-19.07deg);
+    right: 9vw;
+    top: 9vw;
+    width: 26.5vw;
+    height: 26.5vw;
+  }
+  100% {
+    transform: rotate(0);
+    right: -26vw;
+    top: 0;
+    width: 38.2vw;
+    height: 38.2vw;
+  }
+}
+
+@keyframes currGoForward {
+  0% {
+    width: 38.5vw;
+    height: 38.5vw;
+    left: 0vw;
+    top: 0vw;
+    transform: rotate(0);
+  }
+  100% {
+    width: 26.5vw;
+    height: 26.5vw;
+    left: 31vw;
+    top: 9vw;
+    transform: rotate(18.07deg);
+  }
+}
+
+@keyframes nextGoForward {
+  0% {
+    transform: rotate(18.07deg);
+    left: 9vw;
+    top: 9vw;
+    width: 26.5vw;
+    height: 26.5vw;
+  }
+  100% {
+    transform: rotate(36.07deg);
+    left: 40vw;
+    top: 20vw;
+    width: 13.5vw;
+    height: 13.5vw;
+  }
+}
+
+.PrevProj[goback='1'] {
+  animation: prevGoBack 0.3s 1;
+}
+
+.CurrentProj[goback='1'] {
+  animation: currGoBack 0.3s 1;
+}
+
+.NextProj[goback='1'] {
+  animation: nextGoBack 0.3s 1;
+}
+
+.LaterProj[goback='1'] {
+  animation: latrGoBack 0.3s 1;
+}
+
+@keyframes prevGoBack {
+  0% {
+    transform: rotate(-19.07deg);
+    position: relative;
+    right: 9vw;
+    top: 9vw;
+    width: 26.5vw;
+    height: 26.5vw;
+  }
+  100% {
+    transform: rotate(-36.07deg);
+    right: 40vw;
+    top: 25vw;
+    width: 13.5vw;
+    height: 13.5vw;
+  }
+}
+
+@keyframes currGoBack {
+  0% {
+    width: 38.5vw;
+    height: 38.5vw;
+    left: 0vw;
+    top: 0vw;
+    transform: rotate(0);
+  }
+  100% {
+    width: 26.5vw;
+    height: 26.5vw;
+    left: -26.5vw;
+    top: 9vw;
+    transform: rotate(-18.07deg);
+  }
+}
+
+@keyframes nextGoBack {
+  0% {
+    transform: rotate(18.07deg);
+    position: relative;
+    left: 9vw;
+    top: 9vw;
+    width: 26.5vw;
+    height: 26.5vw;
+  }
+  100% {
+    transform: rotate(0);
+    left: -22vw;
+    top: 0;
+    width: 38.5vw;
+    height: 38.5vw;
+  }
+}
+
+@keyframes latrGoBack {
+  0% {
+    transform: rotate(36.07deg);
+    top: 30vw;
+    right: -25vw;
+    width: 13.5vw;
+    height: 13.5vw;
+  }
+  100% {
+    transform: rotate(19.07deg);
+    right: -13.5vw;
+    top: 19vw;
+    width: 26.5vw;
+    height: 26.5vw;
+  }
 }
 
 .ProjectName {
@@ -49,18 +244,38 @@
   width: 50vw;
   margin: 0 auto;
   justify-content: space-between;
+  position: relative;
+  left: 1.6vw;
 }
 
 
 .PrevArrow {
   width: 5.1vw;
-  height: auto;
+  height: 3vw;
+  transition: transform 0.5s;
 }
 
 .NextArrow {
   width: 5.1vw;
   transform: rotate(180deg);
-  height: auto;
+  height: 3vw;
+  transition: transform 0.5s;
+}
+
+.PrevArrow:hover {
+  transform: scale(1.3);
+}
+
+.NextArrow:hover {
+  transform: rotate(180deg) scale(1.3);
+}
+
+.PrevArrow:active {
+  transform: scale(0.7);
+}
+
+.NextArrow:active {
+  transform: rotate(180deg) scale(0.7);
 }
 
 .LinksContainer {
