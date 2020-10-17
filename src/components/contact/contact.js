@@ -5,8 +5,10 @@ import linkArrow from '../../assets/linkArrow.svg';
 
 const contact = props => {
   return (
-    <div id='contact' className={styles.Contact}>
-      <h2 className={styles.Title}>Contact</h2>
+    <div mode={props.mode} id='contact' className={styles.Contact + ' secondaryBackground'}>
+      <h2 mode={props.mode} className={styles.Title + ' secondaryText'}>
+        Contact
+      </h2>
       <div className={styles.ContactLinks}>
         <div className={styles.Email}>
           <h4>
@@ -17,6 +19,8 @@ const contact = props => {
         <div className={styles.Github}>
           <h4>
             <a
+              className='secondaryText'
+              mode={props.mode}
               target='_blank'
               rel='noopener noreferrer'
               href='https://github.com/kikupiku'
@@ -24,7 +28,7 @@ const contact = props => {
               github
             </a>
           </h4>
-          <img className={styles.GithubArrow} src={linkArrow} alt='' />
+          <img mode={props.mode} className={styles.GithubArrow} src={linkArrow} alt='' />
         </div>
         <div className={styles.Linkedin}>
           <h4>
@@ -36,11 +40,13 @@ const contact = props => {
               linkedin
             </a>
           </h4>
-          <img src={linkArrow} alt='' />
+          <img mode={props.mode} src={linkArrow} alt='' />
         </div>
         <div className={styles.CV}>
           <h4>
             <a
+              className='secondaryText'
+              mode={props.mode}
               target='_blank'
               rel='noopener noreferrer'
               href='https://visualcv.com/kkaswen-wilk/'
@@ -48,7 +54,7 @@ const contact = props => {
               resume
             </a>
           </h4>
-          <img className={styles.CVArrow} src={linkArrow} alt='' />
+          <img mode={props.mode} className={styles.CVArrow} src={linkArrow} alt='' />
         </div>
       </div>
     </div>

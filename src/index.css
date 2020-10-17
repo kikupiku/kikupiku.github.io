@@ -44,26 +44,82 @@ h4 {
   line-height: 5.3vw;
 }
 
-.text[mode='light'] {
+.text[mode='light'],
+.linkText[mode='dark'],
+.secondaryText[mode='dark'],
+.linkText[mode='light']:hover {
   color: #1B4C4C;
+  animation: lightToDarkColor 1s 1;
 }
 
-.text[mode='dark'] {
+.text[mode='dark'],
+.linkText[mode='light']
+.secondaryText[mode='light'],
+.linkText[mode='dark']:hover {
   color: #C4DEC1;
+  animation: darkToLightColor 1s 1;
 }
 
-.background[mode='light'] {
+.background[mode='light'],
+.secondaryBackground[mode='dark'],
+.linkBackground[mode='dark'] {
   background-color: #C4DEC1; 
 }
 
-.background[mode='dark'] {
+.background[mode='dark'],
+.secondaryBackground[mode='light'],
+.linkBackground[mode='light'] {
   background-color:  #1B4C4C;
 }
 
-.secondaryBackground[mode='light'] {
-  background-color:  #1B4C4C; 
+.linkBackground[mode='light']:hover {
+  background-color: #C4DEC1;
+  border: 2px solid #1B4C4C;
+  animation: darkToLightBackground 1s 1;
 }
 
-.secondaryBackground[mode='dark'] {
-  background-color: #C4DEC1;
+.linkBackground[mode='dark']:hover {
+  background-color:  #1B4C4C;
+  border: 2px solid #C4DEC1;
+  animation: lightToDarkBackground 1s 1;
+}
+
+@keyframes lightToDarkColor {
+  0% {
+    color: #C4DEC1;
+  }
+  100% {
+    color: #1B4C4C;
+  }
+}
+
+@keyframes darkToLightColor {
+  0% {
+    color: #1B4C4C;
+  }
+  100% {
+    color: #C4DEC1;
+  }
+}
+
+@keyframes lightToDarkBackground {
+  0% {
+    background-color: #C4DEC1;
+    border: 2px solid #1B4C4C;
+  }
+  100% {
+    background-color: #1B4C4C;
+    border: 2px solid #C4DEC1;
+  }
+}
+
+@keyframes darkToLightBackground {
+  0% {
+    background-color: #1B4C4C;
+    border: 2px solid #C4DEC1;
+  }
+  100% {
+    background-color: #C4DEC1;
+    border: 2px solid #1B4C4C;
+  }
 }

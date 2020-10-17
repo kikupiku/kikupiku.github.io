@@ -58,8 +58,35 @@ ul {
 .ToggleCircle {
   position: absolute;
   top: 0.18vw;
-  left: 0.8vw;
   width: 1.5vw;
   height: 1.5vw;
   border-radius: 50%;
+}
+
+.ToggleCircle[mode='light'] {
+  left: 0.8vw;
+  animation: moveToggleToLight 0.3s 1;
+}
+
+.ToggleCircle[mode='dark'] {
+  left: -1vw;
+  animation: moveToggleToDark 0.3s 1;
+}
+
+@keyframes moveToggleToDark {
+  0% {
+    left: 0.8vw;
+  }
+  100% {
+    left: -1vw;
+  }
+}
+
+@keyframes moveToggleToLight {
+  0% {
+    left: -1vw;
+  }
+  100% {
+    left: 0.8vw;
+  }
 }

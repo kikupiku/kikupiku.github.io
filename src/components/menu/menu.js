@@ -66,7 +66,7 @@ const menu = props => {
             </div>
           </li>
           <li>
-            <div className={styles.ToggleContainer}>
+            <div onClick={props.toggle} className={styles.ToggleContainer}>
               <div
                 mode={props.mode}
                 className={styles.Toggle + ' secondaryBackground'}

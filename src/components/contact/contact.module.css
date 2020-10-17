@@ -54,10 +54,17 @@
   color: #c4dec1;
 }
 
-.GithubArrow,
-.CVArrow {
+.GithubArrow[mode='light'],
+.CVArrow[mode='light'] {
   filter: brightness(0) saturate(100%) invert(95%) sepia(6%) saturate(900%) hue-rotate(61deg) brightness(93%) contrast(89%);
 }
+
+.GithubArrow[mode='dark'],
+.CVArrow[mode='dark'] {
+  filter: brightness(0) saturate(100%) invert(23%) sepia(17%) saturate(1502%) hue-rotate(131deg) brightness(98%) contrast(90%);
+}
+
+
 
 .Linkedin {
   color: white;

@@ -1,23 +1,29 @@
 import React, { useState } from 'react';
 
 import styles from './projects.module.css';
-import arrow from '../../assets/arrow.png';
-import carouselArrow from '../../assets/carousel-arrow.png';
+import arrowLight from '../../assets/arrow-light.png';
+import arrowDark from '../../assets/arrow-dark.png';
+import carouselArrowLight from '../../assets/carousel-arrow-light.png';
+import carouselArrowDark from '../../assets/carousel-arrow-dark.png';
 import { myProjects } from './projectsIndex';
 
 const Projects = props => {
+  
   const [earlierProject, setEarlierProject] = useState(myProjects[myProjects.length - 1]);
   const [previousProject, setPreviousProject] = useState(myProjects[0]);
   const [currentProject, setCurrentProject] = useState(myProjects[1]);
   const [nextProject, setNextProject] = useState(myProjects[2]);
   const [laterProject, setLaterProject] = useState(myProjects[3]);
-
+  
   const [goBackButton, setGoBackButton] = useState(0);
   const [goForwardButton, setGoForwardButton] = useState(0);
-
+  
   let projectName = currentProject.name;
   let githubLink = currentProject.github;
   let pageLink = currentProject.link;
+  
+  const arrow = props.mode === 'light' ? arrowLight : arrowDark;
+  const carouselArrow = props.mode === 'light' ? carouselArrowLight : carouselArrowDark;
 
   const onPreviousHandler = () => {
     setGoBackButton(1);
@@ -65,7 +71,9 @@ const Projects = props => {
 
   return (
     <div id='projects' className={styles.ProjectsComponent}>
-      <h2 className={styles.Projects}>Projects</h2>
+      <h2 mode={props.mode} className={styles.Projects + ' text'}>
+        Projects
+      </h2>
       <div className={styles.CarouselContainer}>
         <div className={styles.ProjGifs}>
           <img
@@ -143,17 +151,19 @@ const Projects = props => {
         </div>
         <div className={styles.LinksContainer}>
           <a
+            mode={props.mode}
             target='_blank'
             rel='noopener noreferrer'
-            className={styles.Link}
+            className={styles.Link + ' linkText linkBackground'}
             href={githubLink}
           >
             See Github
           </a>
           <a
+            mode={props.mode}
             target='_blank'
             rel='noopener noreferrer'
-            className={styles.Link}
+            className={styles.Link + ' linkText linkBackground'}
             href={pageLink}
           >
             See Project

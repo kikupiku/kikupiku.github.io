@@ -11,9 +11,13 @@ import Contact from './components/contact/contact';
 const App = () => {
   const [mode, setMode] = useState('dark');
 
+  const toggleModeHandler = () => {
+    mode === 'light' ? setMode('dark') : setMode('light');
+  }
+
   return (
     <div mode={mode} className={styles.App + ' background'}>
-      <Menu mode={mode} />
+      <Menu toggle={toggleModeHandler} mode={mode} />
       <Main mode={mode} />
       <About mode={mode} />
       <Skills mode={mode} />

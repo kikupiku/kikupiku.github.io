@@ -65,9 +65,20 @@
   display: inline-block;
   content: '';
   position: absolute;
-  background-color: #1B494B;
   z-index: -1;
   transform: translateZ(-1px);
+}
+
+.Calligraphy[mode='light']::before,
+.Painting[mode='light']::before,
+.Crafts[mode='light']::before {
+  background-color: #1B494B;
+}
+
+.Calligraphy[mode='dark']::before,
+.Painting[mode='dark']::before,
+.Crafts[mode='dark']::before {
+  background-color:#C4DEC1;
 }
 
 .Calligraphy::before {
