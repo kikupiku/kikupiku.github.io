@@ -56,6 +56,7 @@ const contact = props => {
           </h4>
           <img mode={props.mode} className={styles.CVArrow} src={linkArrow} alt='' />
         </div>
+      <p className={styles.Design}>Designed by Barbara Skrodzka</p>
       </div>
     </div>
   );

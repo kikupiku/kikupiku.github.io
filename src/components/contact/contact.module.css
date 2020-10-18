@@ -28,10 +28,10 @@
   justify-content: center;
 }
 
-.Email:hover,
-.Github:hover,
-.Linkedin:hover,
-.CV:hover {
+.Email a:hover,
+.Github a:hover,
+.Linkedin a:hover,
+.CV a:hover {
   text-decoration: underline;
 }
 
@@ -68,4 +68,11 @@
 
 .Linkedin {
   color: white;
+}
+
+.Design {
+  position: relative;
+  top: 7vw;
+  width: 30vw;
+  margin: 0 auto;
 }

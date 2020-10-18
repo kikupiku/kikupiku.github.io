@@ -9,7 +9,7 @@ import WhenIDontCode from './components/widwidc/widwidc';
 import Contact from './components/contact/contact';
 
 const App = () => {
-  const [mode, setMode] = useState('dark');
+  const [mode, setMode] = useState('light');
 
   const toggleModeHandler = () => {
     mode === 'light' ? setMode('dark') : setMode('light');
