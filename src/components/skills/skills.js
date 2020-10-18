@@ -1,8 +1,8 @@
 import React from 'react';
 
 import styles from './skills.module.css';
-import arrowLight from '../../assets/arrow-light.png';
-import arrowDark from '../../assets/arrow-dark.png';
+import arrowLight from '../../assets/arrow-light.svg';
+import arrowDark from '../../assets/arrow-dark.svg';
 import Skill from '../UI/skill/skill';
 import { frontendImages, backendImages, otherImages } from './skillIndex';
 

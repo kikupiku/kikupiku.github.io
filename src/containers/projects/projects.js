@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 
 import styles from './projects.module.css';
-import arrowLight from '../../assets/arrow-light.png';
-import arrowDark from '../../assets/arrow-dark.png';
-import carouselArrowLight from '../../assets/carousel-arrow-light.png';
-import carouselArrowDark from '../../assets/carousel-arrow-dark.png';
+import arrowLight from '../../assets/arrow-light.svg';
+import arrowDark from '../../assets/arrow-dark.svg';
+import carouselArrowLight from '../../assets/carousel-arrow-light.svg';
+import carouselArrowDark from '../../assets/carousel-arrow-dark.svg';
 import { myProjects } from './projectsIndex';
 
 const Projects = props => {

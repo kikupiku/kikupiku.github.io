@@ -22,7 +22,7 @@ p {
 
 .Arrow {
   transform: rotate(200deg) scaleY(-1);
-  width: 8vw;
+  width: 14vw;
   height: auto;
   position: relative;
   left: 26vw;

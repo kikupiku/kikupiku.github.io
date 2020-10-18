@@ -22,7 +22,7 @@ p {
 }
 
 .SkillsContainer:hover {
-  cursor: url('../../assets/cursor.png'), pointer;
+  cursor: url('../../assets/cursor.cur');
 }
 
 .Skill::before {
@@ -38,7 +38,7 @@ p {
 
 .Arrow {
   transform: rotate(145deg) scaleY(-1);
-  width: 8vw;
+  width: 14vw;
   height: auto;
   position: relative;
   left: 35vw;

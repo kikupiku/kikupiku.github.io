@@ -283,6 +283,8 @@
   display: flex;
   width: 23vw;
   margin: 0 auto;
+  position: relative;
+  left: 1.5vw;
   justify-content: space-between;
   margin-bottom: 4.3vw;
 }
@@ -309,7 +311,7 @@
 
 .Arrow {
   transform: rotate(175deg) scaleY(-1);
-  width: 8vw;
+  width: 14vw;
   height: auto;
   margin: 0 auto;
   position: relative;

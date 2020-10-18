@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './about.module.css';
-import arrowLight from '../../assets/arrow-light.png';
-import arrowDark from '../../assets/arrow-dark.png';
+import arrowLight from '../../assets/arrow-light.svg';
+import arrowDark from '../../assets/arrow-dark.svg';
 
 const about = props => {
   const arrow = props.mode === 'light' ? arrowLight : arrowDark;

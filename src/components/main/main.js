@@ -1,8 +1,8 @@
 import React from 'react';
 import katarzynapic from '../../assets/k-kaswen-wilk-pic.jpg';
 import styles from './main.module.css';
-import arrowLight from '../../assets/arrow-light.png';
-import arrowDark from '../../assets/arrow-dark.png';
+import arrowLight from '../../assets/arrow-light.svg';
+import arrowDark from '../../assets/arrow-dark.svg';
 
 const main = props => {
   const arrow = props.mode === 'light' ? arrowLight : arrowDark

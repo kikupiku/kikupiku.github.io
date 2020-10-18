@@ -14,6 +14,7 @@
 
 .SkillContainer:hover {
   bottom: 20px;
+  cursor: url('../../../assets/cursor.svg'), pointer;
 }
 
 .SkillContainer::before {
