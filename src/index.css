@@ -14,7 +14,7 @@ a {
 }
 
 a:hover {
-  cursor: pointer;
+  cursor: url('./assets/cursor.cur');
 }
 
 body {
@@ -144,5 +144,16 @@ h4 {
   }
   100% {
     background-color: #C4DEC1;
+  }
+}
+
+@media all and (max-width: 414px) {
+  h2 {
+    font-size: 11.2vw;
+    margin-bottom: 10.6vw;
+  }
+
+  p {
+    font-size: 6.93vw;
   }
 }

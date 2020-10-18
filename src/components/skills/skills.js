@@ -33,15 +33,15 @@ const skills = props => {
     <div id='skills' className={styles.SkillsComponent}>
       <h2 mode={props.mode} className={styles.Skills + ' text'}>Skills</h2>
       <p>front-end</p>
-      <div className={styles.SkillsContainer + ' ' + styles.Frontend}>
+      <div className={styles.SkillsContainer}>
         {frontendSkills}
       </div>
       <p>back-end</p>
-      <div className={styles.SkillsContainer + ' ' + styles.Backend}>
+      <div className={styles.SkillsContainer}>
         {backendSkills}
       </div>
       <p>miscellaneous</p>
-      <div className={styles.SkillsContainer + ' ' + styles.Other}>
+      <div className={styles.SkillsContainer}>
         {otherSkills}
       </div>
       <img className={styles.Arrow} src={arrow} alt=''/>

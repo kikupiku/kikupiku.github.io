@@ -265,10 +265,12 @@
 
 .PrevArrow:hover {
   transform: scale(1.3);
+  cursor: url('../../assets/cursor.cur'), pointer;
 }
 
 .NextArrow:hover {
   transform: rotate(180deg) scale(1.3);
+  cursor: url('../../assets/cursor.cur'), pointer;
 }
 
 .PrevArrow:active {

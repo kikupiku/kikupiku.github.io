@@ -4,12 +4,12 @@
 }
 
 .Skills {
-  margin-bottom: 47px;
+  margin-bottom: 3.6vw;
   text-align: left;
 }
 
 p {
-  margin-bottom: 16px;
+  margin-bottom: 1.25vw;
 }
 
 .SkillsContainer {
@@ -42,4 +42,30 @@ p {
   height: auto;
   position: relative;
   left: 35vw;
+}
+
+@media all and (max-width: 414px) {
+  .Skills {
+    margin-bottom: -10vw;
+  }
+
+  p {
+    margin-bottom: 4.2vw;
+    margin-top: 20.6vw;
+  }
+
+  .SkillsContainer {
+    display: grid;
+    grid-template-columns: repeat(3, 20.8vw);
+    grid-column-gap: 7.5vw;
+    grid-row-gap: 16.5vw;
+    height: auto;
+  }
+
+  .Arrow {
+    transform: rotate(145deg) scaleY(-1);
+    width: 30vw;
+    left: 28vw;
+    margin-top: 16.4vw;
+  }
 }

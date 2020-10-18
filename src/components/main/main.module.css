@@ -2,7 +2,6 @@
   scroll-margin-top: 14vw;
   position: relative;
   font-family: 'Volkhov', serif;
-  /* color: #1B494B; */
   max-width: 100%;
   margin-top: 14vw;
   margin-bottom: 7.8vw;
@@ -13,12 +12,13 @@
   font-size: 9.53vw;
   z-index: 9999;
   line-height: 1;
-  margin-bottom: 25px;
+  margin-bottom: 1.95vw; 
 }
 
 .SecondaryTitle {
   color: white;
   font-size: 3.28vw;
+  font-family: 'Volkhov', serif;
 }
 
 .Pic {
@@ -35,5 +35,30 @@
 .Arrow {
   width: 14vw;
   height: auto;
-  margin-top: 50px;
+  margin-top: 3.9vw;
+}
+
+@media all and (max-width: 414px) {
+  .Title {
+    font-size: 16.5vw;
+    margin-bottom: 9vw;
+  }
+
+  .Pic {
+    width: 49.3vw;
+    top: 23vw;
+    left: 38vw;
+  }
+
+  .SecondaryTitle {
+    font-size: 7.46vw;
+    width: 51.2vw;
+    line-height: 9vw;
+  }
+
+  .Arrow {
+    margin-top: 15.5vw;
+    width: 30vw;
+    transform: rotate(-5deg);
+  }
 }
