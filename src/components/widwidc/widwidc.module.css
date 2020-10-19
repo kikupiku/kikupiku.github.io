@@ -78,7 +78,7 @@
 .Calligraphy[mode='dark']::before,
 .Painting[mode='dark']::before,
 .Crafts[mode='dark']::before {
-  background-color:#C4DEC1;
+  background-color:#C9D9C2;
 }
 
 .Calligraphy::before {
@@ -133,4 +133,87 @@
 .Crafts::after {
   content: 'Crafts';
   top: 15.5vw;
+}
+
+@media all and (max-width: 414px) {
+  .Title {
+    width: 88.2vw;
+    text-align: center;
+    margin: 22vw auto 18vw auto;
+  }
+
+  .HobbiesContainer {
+    width: 87vw;
+    height: auto;
+    margin: 0 auto 33vw auto;
+    position: relative;
+    left: 2vw;
+  }
+
+  .Calligraphy {
+    width: 45.2vw;
+    height: 23.75vw;
+    bottom: 1.7vw;
+    left: 1vw;
+  }
+
+  .Singing {
+    width: 41.5vw;
+    height: 24.6vw;
+  }
+
+  .Painting {
+    width: 43.3vw;
+    height: 28.7vw;
+    bottom: 9.8vw;
+    left: 9vw;
+  }
+
+  .Crafts {
+    width: 24.3vw;
+    height: 24.3vw;
+    bottom: 5.3vw;
+    left: 4.7vw;
+  }
+
+  .Calligraphy::before {
+    width: 11.5vw;
+    height: 25.9vw;
+    right: 37vw;
+  }
+
+  .Painting::before {
+    height: 33vw;
+    right: 2.5vw;
+  }
+
+  .Crafts::before {
+    width: 115%;
+    height: 18vw;
+    right: 1.8vw;
+    top: 19.5vw;
+  }
+
+  .Calligraphy::after,
+  .Singing::after,
+  .Painting::after,
+  .Crafts::after {
+    font-size: 6.9vw;
+  }
+
+  .Calligraphy::after {
+    bottom: 25.3vw;
+  }
+
+  .Singing::after {
+    bottom: 26.3vw;
+  }
+
+  .Painting::after {
+    top: 30.2vw;
+  }
+
+  .Crafts::after {
+    top: 26vw;
+  }
 }

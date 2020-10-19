@@ -24,6 +24,8 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  --light-green: #C9D9C2;
+  --dark-green: #1B494B;
 }
 
 code {
@@ -52,7 +54,7 @@ h4 {
 .linkText[mode='dark'],
 .secondaryText[mode='dark'],
 .linkText[mode='light']:hover {
-  color: #1B4C4C;
+  color: var(--dark-green);
   animation: lightToDarkColor 1s 1;
 }
 
@@ -60,90 +62,90 @@ h4 {
 .linkText[mode='light']
 .secondaryText[mode='light'],
 .linkText[mode='dark']:hover {
-  color: #C4DEC1;
+  color: var(--light-green);
   animation: darkToLightColor 1s 1;
 }
 
 .background[mode='light'],
 .secondaryBackground[mode='dark'],
 .linkBackground[mode='dark'] {
-  background-color: #C4DEC1; 
+  background-color: var(--light-green); 
   animation: darkToLightBackground 1s 1;
 }
 
 .background[mode='dark'],
 .secondaryBackground[mode='light'],
 .linkBackground[mode='light'] {
-  background-color:  #1B4C4C;
+  background-color:  var(--dark-green);
   animation: lightToDarkBackground 1s 1;
 }
 
 .linkBackground[mode='light']:hover {
-  background-color: #C4DEC1;
-  border: 2px solid #1B4C4C;
+  background-color: var(--light-green);
+  border: 2px solid var(--dark-green);
   animation: darkToLightBackgroundWithBorder 1s 1;
 }
 
 .linkBackground[mode='dark']:hover {
-  background-color:  #1B4C4C;
-  border: 2px solid #C4DEC1;
+  background-color:  var(--dark-green);
+  border: 2px solid var(--light-green);
   animation: lightToDarkBackgroundWithBorder 1s 1;
 }
 
 @keyframes lightToDarkColor {
   0% {
-    color: #C4DEC1;
+    color: var(--light-green);
   }
   100% {
-    color: #1B4C4C;
+    color: var(--dark-green);
   }
 }
 
 @keyframes darkToLightColor {
   0% {
-    color: #1B4C4C;
+    color: var(--dark-green);
   }
   100% {
-    color: #C4DEC1;
+    color: var(--light-green);
   }
 }
 
 @keyframes lightToDarkBackgroundWithBorder {
   0% {
-    background-color: #C4DEC1;
-    border: 2px solid #1B4C4C;
+    background-color: var(--light-green);
+    border: 2px solid var(--dark-green);
   }
   100% {
-    background-color: #1B4C4C;
-    border: 2px solid #C4DEC1;
+    background-color: var(--dark-green);
+    border: 2px solid var(--light-green);
   }
 }
 
 @keyframes darkToLightBackgroundWithBorder {
   0% {
-    background-color: #1B4C4C;
-    border: 2px solid #C4DEC1;
+    background-color: var(--dark-green);
+    border: 2px solid var(--light-green);
   }
   100% {
-    background-color: #C4DEC1;
-    border: 2px solid #1B4C4C;
+    background-color: var(--light-green);
+    border: 2px solid var(--dark-green);
   }
 }
 @keyframes lightToDarkBackground {
   0% {
-    background-color: #C4DEC1;
+    background-color: var(--light-green);
   }
   100% {
-    background-color: #1B4C4C;
+    background-color: var(--dark-green);
   }
 }
 
 @keyframes darkToLightBackground {
   0% {
-    background-color: #1B4C4C;
+    background-color: var(--dark-green);
   }
   100% {
-    background-color: #C4DEC1;
+    background-color: var(--light-green);
   }
 }
 

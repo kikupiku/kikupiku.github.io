@@ -250,7 +250,6 @@
   left: 1.6vw;
 }
 
-
 .PrevArrow {
   width: 5.1vw;
   height: 3vw;
@@ -295,7 +294,7 @@
 .Link {
   width: 10.5vw;
   height: 3.1vw;
-  border-radius: 40px;
+  border-radius: 10.6vw;
   background-color: #1B494B;
   font-family: 'DM Sans', sans-serif;
   text-decoration: none;
@@ -506,5 +505,57 @@
       width: 39.2vw;
       height: 39.2vw;
     }
+  }
+
+  .NameContainer {
+    width: 90vw;
+    left: -0.9vw;
+  }
+
+  .ProjectName {
+    position: relative;
+    bottom: 19.5vw;
+    height: 5vw;
+  }
+
+  .PrevArrow {
+    width: 11.5vw;
+    height: 12vw;
+  }
+
+  .NextArrow {
+    width: 11.5vw;
+    transform: rotate(180deg);
+    height: 12vw;
+  }
+
+  .PrevArrow:hover {
+    transform: scale(1);
+  }
+
+  .NextArrow:hover {
+    transform: rotate(180deg);
+  }
+
+  .LinksContainer {
+    width: 38.5vw;
+    height: 28vw;
+    flex-direction: column;
+    margin-top: -15vw;
+    padding-right: 3vw;
+  }
+
+  .Link {
+    width: 37.8vw;
+    height: 10.6vw;
+    font-size: 5vw;
+  }
+
+  .Arrow {
+    transform: rotate(145deg) scaleY(-1);
+    width: 30vw;
+    position: relative;
+    left: 30vw;
+    top: 10vw;
   }
 }

@@ -1,6 +1,6 @@
 export const myProjects = [
   {
-    name: 'The Next Web Clone',
+    name: 'TNW Clone',
     gif:
       'https://res.cloudinary.com/kikupiku/image/upload/v1602937756/project-gifs/tnw-clone_tsi2dk.gif',
     github: 'https://github.com/kikupiku/tnw-clone',
