@@ -7,6 +7,7 @@
 .Projects {
   width: 19vw;
   margin: 0 auto 3.6vw auto;
+  position: relative;
 }
 
 .ProjGifs {
@@ -67,19 +68,19 @@
 }
 
 .EarlierProj[goforward='1'] {
-  animation: earlGoForward 0.3s 1;
+  animation: earlGoForward 0.5s 1;
 }
 
 .PrevProj[goforward='1'] {
-  animation: prevGoForward 0.3s 1;
+  animation: prevGoForward 0.5s 1;
 }
 
 .CurrentProj[goforward='1'] {
-  animation: currGoForward 0.3s 1;
+  animation: currGoForward 0.5s 1;
 }
 
 .NextProj[goforward='1'] {
-  animation: nextGoForward 0.3s 1;
+  animation: nextGoForward 0.5s 1;
 }
 
 @keyframes earlGoForward {
@@ -127,7 +128,7 @@
   100% {
     width: 26.5vw;
     height: 26.5vw;
-    left: 31vw;
+    left: 35vw;
     top: 9vw;
     transform: rotate(18.07deg);
   }
@@ -151,19 +152,19 @@
 }
 
 .PrevProj[goback='1'] {
-  animation: prevGoBack 0.3s 1;
+  animation: prevGoBack 0.5s 1;
 }
 
 .CurrentProj[goback='1'] {
-  animation: currGoBack 0.3s 1;
+  animation: currGoBack 0.5s 1;
 }
 
 .NextProj[goback='1'] {
-  animation: nextGoBack 0.3s 1;
+  animation: nextGoBack 0.5s 1;
 }
 
 .LaterProj[goback='1'] {
-  animation: latrGoBack 0.3s 1;
+  animation: latrGoBack 0.5s 1;
 }
 
 @keyframes prevGoBack {
@@ -195,7 +196,7 @@
   100% {
     width: 26.5vw;
     height: 26.5vw;
-    left: -26.5vw;
+    left: -22.5vw;
     top: 9vw;
     transform: rotate(-18.07deg);
   }
@@ -212,7 +213,7 @@
   }
   100% {
     transform: rotate(0);
-    left: -22vw;
+    left: -14vw;
     top: 0;
     width: 38.5vw;
     height: 38.5vw;
@@ -318,4 +319,192 @@
   margin: 0 auto;
   position: relative;
   left: 38vw;
+}
+
+@media all and (max-width: 414px) {
+  .Projects {
+    right: 12vw;
+  }
+
+  .ProjGifs {
+  display: flex;
+  height: 62.36vw;
+  margin-top: 10.6vw;
+  margin-bottom: 7.77vw;
+}
+
+  .CurrentProj {
+    width: 62.36vw;
+    height: 62.36vw;
+    left: -26vw;
+  }
+
+  .EarlierProj,
+  .LaterProj {
+    width: 26.5vw;
+    height: 26.5vw;
+  }
+  
+  .PrevProj,
+  .NextProj {
+    width: 39.2vw;
+    height: 39.2vw;
+  }
+
+  .EarlierProj {
+    left: -43vw;
+    top: 40vw;
+  }
+
+  .LaterProj {
+    top: 30vw;
+    right: -45vw;
+  }
+
+  .PrevProj {
+    right: 35vw;
+    top: 20vw;
+  }
+
+  .NextProj {
+    left: -17vw;
+    top: 20vw;
+  }
+
+  @keyframes earlGoForward {
+    0% {
+      transform: rotate(-36.07deg);
+      left: -23vw;
+      top: 40vw;
+      width: 13.5vw;
+      height: 13.5vw;
+    }
+    100% {
+      transform: rotate(-19.07deg);
+      left: -35vw;
+      top: 45.5vw;
+      width: 39.2vw;
+      height: 39.2vw;
+    }
+  }
+
+  @keyframes prevGoForward {
+    0% {
+      transform: rotate(-19.07deg);
+      right: 35vw;
+      top: 20vw;
+      width: 39.2vw;
+      height: 39.2vw;
+    }
+    100% {
+      transform: rotate(0);
+      right: -13.5vw;
+      top: 0;
+      width: 62.36vw;
+      height: 62.36vw;
+    }
+  }
+
+  @keyframes currGoForward {
+    0% {
+      width: 62.36vw;
+      height: 62.36vw;
+      left: -26vw;
+      top: 0;
+      transform: rotate(0);
+    }
+    100% {
+      width: 39.2vw;
+      height: 39.2vw;
+      left: 23vw;
+      top: 20vw;
+      transform: rotate(18.07deg);
+    }
+  }
+
+  @keyframes nextGoForward {
+    0% {
+      transform: rotate(18.07deg);
+      left: -17vw;
+      top: 20vw;
+      width: 39.2vw;
+      height: 39.2vw;
+    }
+    100% {
+      transform: rotate(36.07deg);
+      left: 40vw;
+      top: 20vw;
+      width: 13.5vw;
+      height: 13.5vw;
+    }
+  }
+
+  @keyframes prevGoBack {
+    0% {
+      transform: rotate(-19.07deg);
+      position: relative;
+      right: 35vw;
+      top: 20vw;
+      width: 39.2vw;
+      height: 39.2vw;
+    }
+    100% {
+      transform: rotate(-36.07deg);
+      right: 40vw;
+      top: 25vw;
+      width: 13.5vw;
+      height: 13.5vw;
+    }
+  }
+
+  @keyframes currGoBack {
+    0% {
+      width: 62.36vw;
+      height: 62.36vw;
+      left: -26vw;
+      top: 0vw;
+      transform: rotate(0);
+    }
+    100% {
+      width: 39.2vw;
+      height: 39.2vw;
+      left: -48vw;
+      top: 19.5vw;
+      transform: rotate(-18.07deg);
+    }
+  }
+
+  @keyframes nextGoBack {
+    0% {
+      transform: rotate(18.07deg);
+      left: -17vw;
+      top: 20vw;
+      width: 39.2vw;
+      height: 39.2vw;
+    }
+    100% {
+      transform: rotate(0);
+      left: -39vw;
+      top: 0;
+      width: 62.36vw;
+      height: 62.36vw;
+    }
+  }
+
+  @keyframes latrGoBack {
+    0% {
+      transform: rotate(20.07deg);
+      top: 30vw;
+      right: -48vw;
+      width: 26vw;
+      height: 26vw;
+    }
+    100% {
+      transform: rotate(19.07deg);
+      right: -36vw;
+      top: 46vw;
+      width: 39.2vw;
+      height: 39.2vw;
+    }
+  }
 }

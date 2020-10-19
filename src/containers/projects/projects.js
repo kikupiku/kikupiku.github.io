@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Swipeable } from 'react-swipeable';
 
 import styles from './projects.module.css';
 import arrowLight from '../../assets/arrow-light.svg';
@@ -7,36 +8,38 @@ import carouselArrowLight from '../../assets/carousel-arrow-light.svg';
 import carouselArrowDark from '../../assets/carousel-arrow-dark.svg';
 import { myProjects } from './projectsIndex';
 
-const Projects = props => {
-  
-  const [earlierProject, setEarlierProject] = useState(myProjects[myProjects.length - 1]);
+const Projects = (props) => {
+  const [earlierProject, setEarlierProject] = useState(
+    myProjects[myProjects.length - 1]
+  );
   const [previousProject, setPreviousProject] = useState(myProjects[0]);
   const [currentProject, setCurrentProject] = useState(myProjects[1]);
   const [nextProject, setNextProject] = useState(myProjects[2]);
   const [laterProject, setLaterProject] = useState(myProjects[3]);
-  
+
   const [goBackButton, setGoBackButton] = useState(0);
   const [goForwardButton, setGoForwardButton] = useState(0);
-  
+
   let projectName = currentProject.name;
   let githubLink = currentProject.github;
   let pageLink = currentProject.link;
-  
+
   const arrow = props.mode === 'light' ? arrowLight : arrowDark;
-  const carouselArrow = props.mode === 'light' ? carouselArrowLight : carouselArrowDark;
+  const carouselArrow =
+    props.mode === 'light' ? carouselArrowLight : carouselArrowDark;
 
   const onPreviousHandler = () => {
     setGoBackButton(1);
     setTimeout(() => {
-      const prev = {...previousProject};
-      const curr = {...currentProject};
-      const next = {...nextProject};
-      const latr = {...laterProject};
+      const prev = { ...previousProject };
+      const curr = { ...currentProject };
+      const next = { ...nextProject };
+      const latr = { ...laterProject };
       setEarlierProject(prev);
       setPreviousProject(curr);
       setCurrentProject(next);
       setNextProject(latr);
-      const i = myProjects.findIndex(element => element.name === latr.name);
+      const i = myProjects.findIndex((element) => element.name === latr.name);
       let newLater;
       if (i === myProjects.length - 1) {
         newLater = myProjects[0];
@@ -44,8 +47,8 @@ const Projects = props => {
         newLater = myProjects[i + 1];
       }
       setLaterProject(newLater);
-    }, 300);
-  }
+    }, 500);
+  };
 
   const onNextHandler = () => {
     setGoForwardButton(1);
@@ -66,8 +69,16 @@ const Projects = props => {
         newEarlier = myProjects[i - 1];
       }
       setEarlierProject(newEarlier);
-    }, 300);
-  }
+    }, 500);
+  };
+
+  const config = {
+    delta: 10,
+    preventDefaultTouchmoveEvent: false,
+    trackTouch: true,
+    trackMouse: true,
+    rotationAngle: 0,
+  };
 
   return (
     <div id='projects' className={styles.ProjectsComponent}>
@@ -98,17 +109,24 @@ const Projects = props => {
             className={styles.PrevProj}
             alt=''
           />
-          <img
-            goforward={goForwardButton}
-            goback={goBackButton}
-            onAnimationEnd={() => {
-              setGoBackButton(0);
-              setGoForwardButton(0);
-            }}
-            src={currentProject.gif}
-            className={styles.CurrentProj}
-            alt=''
-          />
+          <Swipeable
+            className={styles.Swipe}
+            onSwipedLeft={(eventData) => onPreviousHandler()}
+            {...config}
+            onSwipedRight={(eventData) => onNextHandler()}
+          >
+            <img
+              goforward={goForwardButton}
+              goback={goBackButton}
+              onAnimationEnd={() => {
+                setGoBackButton(0);
+                setGoForwardButton(0);
+              }}
+              src={currentProject.gif}
+              className={styles.CurrentProj}
+              alt=''
+            />
+          </Swipeable>
           <img
             goforward={goForwardButton}
             goback={goBackButton}
