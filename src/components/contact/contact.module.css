@@ -1,8 +1,9 @@
 .Contact {
   background-color: #1B494B;
-  width: 100vw;
+  width: 113.3%;
   position: relative;
   right: 5.7vw;
+  border-radius: 7px 7px 0 0;
 }
 
 .Title {
@@ -64,8 +65,6 @@
   filter: brightness(0) saturate(100%) invert(23%) sepia(17%) saturate(1502%) hue-rotate(131deg) brightness(98%) contrast(90%);
 }
 
-
-
 .Linkedin {
   color: white;
 }
@@ -75,4 +74,54 @@
   top: 7vw;
   width: 30vw;
   margin: 0 auto;
+}
+
+@media all and (max-width: 414px) {
+  .Contact {
+    height: 100vh;
+  }
+
+  .Title {
+    width: 18.2vw;
+    padding-top: 40.4vw;
+    margin: 0 auto 13.6vw auto;
+    color: #C9D9C2;
+    position: relative;
+    right: 12vw;
+  }
+
+  .ContactLinks {
+    padding-bottom: 9vw;
+    color: white;
+  }
+  
+  .Email a,
+  .Github a,
+  .Linkedin a,
+  .CV a {
+    color: white !important;
+    font-size: 6.8vw;
+    line-height: 2.2;
+  }
+
+  .EmailArrow[mode='light'],
+  .GithubArrow[mode='light'],
+  .LinkedinArrow[mode='light'],
+  .CVArrow[mode='light'],
+  .EmailArrow[mode='dark'],
+  .GithubArrow[mode='dark'],
+  .LinkedinArrow[mode='dark'],
+  .CVArrow[mode='dark'] {
+    filter: none;
+    width: 4.5vw; 
+    position: relative;
+    bottom: 0.2vw;
+  }
+
+  .Design {
+  top: 22vw;
+  width: 52vw;
+  font-size: 3.5vw;
+  margin: 0 auto;
+}
 }

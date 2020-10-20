@@ -14,7 +14,7 @@ const contact = props => {
           <h4>
             <a href='mailto:kml.wilk@gmail.com'>kml.wilk@gmail.com</a>
           </h4>
-          <img src={linkArrow} alt='' />
+          <img mode={props.mode} src={linkArrow} className={styles.EmailArrow} alt='' />
         </div>
         <div className={styles.Github}>
           <h4>
@@ -40,7 +40,7 @@ const contact = props => {
               linkedin
             </a>
           </h4>
-          <img mode={props.mode} src={linkArrow} alt='' />
+          <img mode={props.mode} className={styles.LinkedinArrow} src={linkArrow} alt='' />
         </div>
         <div className={styles.CV}>
           <h4>
