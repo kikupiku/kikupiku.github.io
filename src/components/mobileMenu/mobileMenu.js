@@ -1,11 +1,12 @@
 import React from 'react';
 
-import styles from './menu.module.css';
+import styles from './mobileMenu.module.css';
 
-const menu = props => {
+const mobileMenu = (props) => {
+  
   return (
-    <div mode={props.mode} className={styles.Container + ' background'}>
-      <div className={styles.Menu}>
+    <div className={styles.Menu}>
+      <div mode={props.mode} className={styles.MobileMenu + ' background'}>
         <ul>
           <li>
             <a
@@ -66,7 +67,7 @@ const menu = props => {
             </div>
           </li>
           <li>
-            <div onClick={props.toggleMode} className={styles.ToggleContainer}>
+            <div onClick={props.toggle} className={styles.ToggleContainer}>
               <div
                 mode={props.mode}
                 className={styles.Toggle + ' secondaryBackground'}
@@ -81,6 +82,6 @@ const menu = props => {
       </div>
     </div>
   );
-};
+}
 
-export default menu;
+export default mobileMenu;
