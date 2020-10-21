@@ -1,5 +1,5 @@
 .Contact {
-  background-color: #1B494B;
+  background-color: #1b494b;
   width: 113.3%;
   position: relative;
   right: 5.7vw;
@@ -24,7 +24,6 @@
   display: flex;
   width: auto;
   text-align: center;
-  padding-bottom: 3.9vw;
   align-items: center;
   justify-content: center;
 }
@@ -57,16 +56,49 @@
 
 .GithubArrow[mode='light'],
 .CVArrow[mode='light'] {
-  filter: brightness(0) saturate(100%) invert(95%) sepia(6%) saturate(900%) hue-rotate(61deg) brightness(93%) contrast(89%);
+  filter: brightness(0) saturate(100%) invert(95%) sepia(6%) saturate(900%)
+    hue-rotate(61deg) brightness(93%) contrast(89%);
 }
 
 .GithubArrow[mode='dark'],
 .CVArrow[mode='dark'] {
-  filter: brightness(0) saturate(100%) invert(23%) sepia(17%) saturate(1502%) hue-rotate(131deg) brightness(98%) contrast(90%);
+  filter: brightness(0) saturate(100%) invert(23%) sepia(17%) saturate(1502%)
+    hue-rotate(131deg) brightness(98%) contrast(90%);
 }
 
 .Linkedin {
   color: white;
+}
+
+.Email,
+.Github,
+.Linkedin,
+.CV {
+  overflow-y: hidden;
+  height: 7.5vw;
+  margin-bottom: 3.09vw;
+}
+
+.Email a,
+.Github a,
+.Linkedin a,
+.CV a,
+.EmailArrow,
+.GithubArrow,
+.LinkedinArrow,
+.CVArrow {
+  display: inline-block;
+  animation: contactGrow 1s 1;
+  transform: translateY(0);
+}
+
+@keyframes contactGrow {
+  0% {
+    transform: translateY(4vw);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
 
 .Design {
@@ -74,6 +106,10 @@
   top: 7vw;
   width: 30vw;
   margin: 0 auto;
+}
+
+.DesignerLink:hover {
+  text-decoration: underline;
 }
 
 @media all and (max-width: 414px) {
@@ -85,7 +121,7 @@
     width: 18.2vw;
     padding-top: 40.4vw;
     margin: 0 auto 13.6vw auto;
-    color: #C9D9C2;
+    color: #c9d9c2;
     position: relative;
     right: 12vw;
   }
@@ -94,7 +130,7 @@
     padding-bottom: 9vw;
     color: white;
   }
-  
+
   .Email a,
   .Github a,
   .Linkedin a,
@@ -113,15 +149,15 @@
   .LinkedinArrow[mode='dark'],
   .CVArrow[mode='dark'] {
     filter: none;
-    width: 4.5vw; 
+    width: 4.5vw;
     position: relative;
     bottom: 0.2vw;
   }
 
   .Design {
-  top: 22vw;
-  width: 52vw;
-  font-size: 3.5vw;
-  margin: 0 auto;
-}
+    top: 22vw;
+    width: 52vw;
+    font-size: 3.5vw;
+    margin: 0 auto;
+  }
 }

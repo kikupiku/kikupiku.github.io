@@ -5,7 +5,11 @@ import linkArrow from '../../assets/linkArrow.svg';
 
 const contact = props => {
   return (
-    <div mode={props.mode} id='contact' className={styles.Contact + ' secondaryBackground'}>
+    <div
+      mode={props.mode}
+      id='contact'
+      className={styles.Contact + ' secondaryBackground'}
+    >
       <h2 mode={props.mode} className={styles.Title + ' secondaryText'}>
         Contact
       </h2>
@@ -14,7 +18,12 @@ const contact = props => {
           <h4>
             <a href='mailto:kml.wilk@gmail.com'>kml.wilk@gmail.com</a>
           </h4>
-          <img mode={props.mode} src={linkArrow} className={styles.EmailArrow} alt='' />
+          <img
+            mode={props.mode}
+            src={linkArrow}
+            className={styles.EmailArrow}
+            alt=''
+          />
         </div>
         <div className={styles.Github}>
           <h4>
@@ -28,7 +37,12 @@ const contact = props => {
               github
             </a>
           </h4>
-          <img mode={props.mode} className={styles.GithubArrow} src={linkArrow} alt='' />
+          <img
+            mode={props.mode}
+            className={styles.GithubArrow}
+            src={linkArrow}
+            alt=''
+          />
         </div>
         <div className={styles.Linkedin}>
           <h4>
@@ -40,7 +54,12 @@ const contact = props => {
               linkedin
             </a>
           </h4>
-          <img mode={props.mode} className={styles.LinkedinArrow} src={linkArrow} alt='' />
+          <img
+            mode={props.mode}
+            className={styles.LinkedinArrow}
+            src={linkArrow}
+            alt=''
+          />
         </div>
         <div className={styles.CV}>
           <h4>
@@ -54,9 +73,24 @@ const contact = props => {
               resume
             </a>
           </h4>
-          <img mode={props.mode} className={styles.CVArrow} src={linkArrow} alt='' />
+          <img
+            mode={props.mode}
+            className={styles.CVArrow}
+            src={linkArrow}
+            alt=''
+          />
         </div>
-      <p className={styles.Design}>Designed by Barbara Skrodzka</p>
+        <p className={styles.Design}>
+          Designed by{' '}
+          <a
+            className={styles.DesignerLink}
+            target='_blank'
+            rel='noopener noreferrer'
+            href='http://barbaraskrodzka.com/'
+          >
+            Barbara Skrodzka
+          </a>
+        </p>
       </div>
     </div>
   );

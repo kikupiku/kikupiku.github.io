@@ -96,12 +96,14 @@ ul {
   display: none;
 }
 
-.MobileMenu[] {
+.MobileMenu[mobileMenuOpen='false'] {
   transform: translateX(0);
+  transition: transform 1s ease-out;
 }
 
-.Close {
+.MobileMenu[mobileMenuOpen='true'] {
   transform: translateX(100%);
+  transition: transform 1s ease-out;
 }
 
 @media all and (max-width: 414px) {
