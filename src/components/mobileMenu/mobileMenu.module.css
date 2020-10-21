@@ -1,13 +1,11 @@
 .MobileMenu {
-    display: flex;
-    flex-direction: column;
-    position: fixed;
-    width: 100vw;
-    height: 100vh;
-    left: 0;
-    top: 10.25vw;
-    z-index: 999999999;
-    transition: transform 0.3s ease-out;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  left: 0;
+  top: 10.25vw;
+  z-index: 999999999;
+  transition: transform 0.3s ease-out;
   }
 
 .MobileMenu[mode='light'] {
@@ -16,4 +14,25 @@
 
 .MobileMenu[mode='dark'] {
   background:#1B494B;
+}
+
+.MenuList {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 22vw;
+}
+
+.Link {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 13.8vw;
+  line-height: 1.8;
+}
+
+.Link[mode='light'] {
+  color: #1B494B;
+}
+
+.Link[mode='dark'] {
+  color:#C9D9C2;
 }

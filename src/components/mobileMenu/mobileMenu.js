@@ -9,6 +9,7 @@ const mobileMenu = (props) => {
       <ul className={styles.MenuList}>
         <li>
           <a
+            mode={props.mode}
             onClick={props.goToLink}
             href='#main'
             className={styles.Link + ' text'}
@@ -19,6 +20,7 @@ const mobileMenu = (props) => {
         </li>
         <li>
           <a
+            mode={props.mode}
             onClick={props.goToLink}
             href='#about'
             className={styles.Link + ' text'}
@@ -29,7 +31,7 @@ const mobileMenu = (props) => {
         </li>
         <li>
           <a
-            onClick={props.goToLink}
+            mode={props.mode} onClick={props.goToLink}
             href='#skills'
             className={styles.Link + ' text'}
             to='/'
@@ -39,7 +41,7 @@ const mobileMenu = (props) => {
         </li>
         <li>
           <a
-            onClick={props.goToLink}
+            mode={props.mode} onClick={props.goToLink}
             href='#projects'
             className={styles.Link + ' text'}
             to='/'
@@ -49,7 +51,7 @@ const mobileMenu = (props) => {
         </li>
         <li>
           <a
-            onClick={props.goToLink}
+            mode={props.mode} onClick={props.goToLink}
             href='#contact'
             className={styles.Link + ' text'}
             to='/'
