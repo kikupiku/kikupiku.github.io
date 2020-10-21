@@ -1,8 +1,33 @@
-import React from 'react';
+import React, { useState } from 'react';
+
+import MobileMenu from '../../components/mobileMenu/mobileMenu';
 
 import styles from './menu.module.css';
+import burgerMenuOpen from '../../assets/burgerMenuOpen.svg';
+import burgerMenuClosed from '../../assets/burgerMenuClosed.svg';
+import burgerMenuOpenDark from '../../assets/burgerMenuOpenDark.svg';
+import burgerMenuClosedDark from '../../assets/burgerMenuClosedDark.svg';
 
-const menu = props => {
+const Menu = (props) => {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+  const mobileMenuHandler = () => {
+    mobileMenuOpen === false
+      ? setMobileMenuOpen(true)
+      : setMobileMenuOpen(false);
+  };
+
+  const goToLinkHandler = () => {
+    setMobileMenuOpen(false);
+  };
+
+  let menuIcon;
+  if (props.mode === 'light') {
+    menuIcon = mobileMenuOpen ? burgerMenuOpen : burgerMenuClosed;
+  } else {
+    menuIcon = mobileMenuOpen ? burgerMenuOpenDark : burgerMenuClosedDark;
+  }
+
   return (
     <div mode={props.mode} className={styles.Container + ' background'}>
       <div className={styles.Menu}>
@@ -77,10 +102,20 @@ const menu = props => {
               ></div>
             </div>
           </li>
+          <li className={styles.MenuBurger}>
+            <div onClick={mobileMenuHandler} >
+              <img
+                className={styles.MenuIcon}
+                src={menuIcon}
+                alt=''
+              />
+            </div>
+          </li>
         </ul>
       </div>
+      {mobileMenuOpen ? <MobileMenu goToLink={goToLinkHandler} mode={props.mode} className={styles.MobileMenu + ' background'} /> : null}
     </div>
   );
 };
 
-export default menu;
+export default Menu;

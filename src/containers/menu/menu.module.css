@@ -27,7 +27,7 @@ ul {
 }
 
 .Link {
-  color: #1B494B;
+  color: #1b494b;
   font-family: 'DM Sans', sans-serif;
   font-size: 1.5vw;
   text-decoration: none;
@@ -91,6 +91,76 @@ ul {
   }
 }
 
+.MobileMenu,
+.MenuBurger {
+  display: none;
+}
+
+.MobileMenu[] {
+  transform: translateX(0);
+}
+
+.Close {
+  transform: translateX(100%);
+}
+
 @media all and (max-width: 414px) {
-  
+  .Menu {
+    top: -1.5vw;
+  }
+
+  .Link[href='#main'],
+  .Link[href='#about'],
+  .Link[href='#skills'],
+  .Link[href='#projects'],
+  .Link[href='#contact'] {
+    display: none;
+  }
+
+  .Mode {
+    font-size: 5vw;
+    margin-right: 3vw;
+  }
+
+  .ToggleMode {
+    width: 12.8vw;
+    height: 6.4vw;
+  }
+
+  .Toggle {
+    width: 12.8vw;
+    height: 6.4vw;
+  }
+
+  .ToggleCircle {
+    width: 5.33vw;
+    height: 5.33vw;
+    position: relative;
+    top: -6vw;
+  }
+
+  .ToggleCircle[mode='light'] {
+    left: 5.5vw;
+  }
+
+  .ToggleCircle[mode='dark'] {
+    left: -0.6vw;
+  }
+
+  .MenuBurger {
+    display: inline-block;
+    transform: all 1s ease-out;
+    margin-left: 5vw;
+    position: relative;
+    top: 0.5vw;
+  }
+
+  .MenuBurger::before {
+    content: '';
+    position: absolute;
+    height: 6.4vw;
+    border-left: 2px solid rgba(27, 73, 75, 0.22);
+    right: 9vw;
+    top: -0.5vw;
+  }
 }

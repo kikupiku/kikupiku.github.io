@@ -1,24 +1,19 @@
 .MobileMenu {
-  display: block;
-  position: fixed;
-  width: 100vw;
-  height: 100vh;
-  left: 0;
-  top: 10.25vw;
-  z-index: 999999999;
-  transition: transform 0.3s ease-out;
-}
-
-.Open {
-  transform: translateX(0);
-}
-
-.Close {
-  transform: translateX(100%);
-}
-
-@media all and (min-width: 415px) {
-  .MobileMenu {
-    display: none;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    left: 0;
+    top: 10.25vw;
+    z-index: 999999999;
+    transition: transform 0.3s ease-out;
   }
+
+.MobileMenu[mode='light'] {
+  background: #C9D9C2;
+}
+
+.MobileMenu[mode='dark'] {
+  background:#1B494B;
 }
