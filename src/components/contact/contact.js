@@ -8,7 +8,7 @@ const Contact = (props) => {
   const [visible, setVisible] = useState(false);
 
   const onScrollHandler = (isVisible) => {
-    isVisible ? setVisible(false) : setVisible(true);
+    isVisible ? setVisible(true) : setVisible(false);
     console.log(visible);
   };
 
@@ -18,14 +18,17 @@ const Contact = (props) => {
       id='contact'
       className={styles.Contact + ' secondaryBackground'}
     >
-      <h2 mode={props.mode} className={styles.Title + ' secondaryText'}>
+      <h2
+        mode={props.mode}
+        className={styles.Title + ' secondaryText'}
+      >
         Contact
       </h2>
       <div className={styles.ContactLinks}>
         <div className={styles.Email}>
           <h4>
             <a
-              className={visible ? styles.Visible : null}
+              className={visible ? styles.Visible : styles.Invisible}
               href='mailto:kml.wilk@gmail.com'
             >
               kml.wilk@gmail.com
@@ -35,7 +38,9 @@ const Contact = (props) => {
             mode={props.mode}
             src={linkArrow}
             className={
-              styles.EmailArrow + ' ' + visible ? styles.Visible : null
+              visible
+                ? styles.Visible + ' ' + styles.EmailArrow
+                : styles.EmailArrow + ' ' + styles.Invisible
             }
             alt=''
           />
@@ -44,7 +49,9 @@ const Contact = (props) => {
           <h4>
             <a
               className={
-                visible ? styles.Visible + ' secondaryText' : 'secondaryText'
+                visible
+                  ? styles.Visible + ' ' + styles.secondaryText
+                  : styles.secondaryText + ' ' + styles.Invisible
               }
               mode={props.mode}
               target='_blank'
@@ -58,7 +65,7 @@ const Contact = (props) => {
             className={
               visible
                 ? styles.Visible + ' ' + styles.GithubArrow
-                : styles.GithubArrow
+                : styles.GithubArrow + ' ' + styles.Invisible
             }
             mode={props.mode}
             src={linkArrow}
@@ -68,7 +75,7 @@ const Contact = (props) => {
         <div className={styles.Linkedin}>
           <h4>
             <a
-              className={visible ? styles.Visible : null}
+              className={visible ? styles.Visible : styles.Invisible}
               target='_blank'
               rel='noopener noreferrer'
               href='https://www.linkedin.com/in/katarzyna-kaswen-wilk-bb14081b7/'
@@ -80,10 +87,9 @@ const Contact = (props) => {
             className={
               visible
                 ? styles.Visible + ' ' + styles.LinkedinArrow
-                : styles.LinkedinArrow
+                : styles.LinkedinArrow + ' ' + styles.Invisible
             }
             mode={props.mode}
-            className={}
             src={linkArrow}
             alt=''
           />
@@ -91,8 +97,11 @@ const Contact = (props) => {
         <div className={styles.CV}>
           <h4>
             <a
-              className={visible ? styles.Visible : null}
-              className='secondaryText'
+              className={
+                visible
+                  ? styles.Visible + ' ' + styles.secondaryText
+                  : styles.secondaryText + ' ' + styles.Invisible
+              }
               mode={props.mode}
               target='_blank'
               rel='noopener noreferrer'
@@ -103,7 +112,9 @@ const Contact = (props) => {
           </h4>
           <img
             className={
-              visible ? styles.Visible + ' ' + styles.CVArrow : styles.CVArrow
+              visible
+                ? styles.Visible + ' ' + styles.CVArrow
+                : styles.CVArrow + ' ' + styles.Invisible
             }
             mode={props.mode}
             src={linkArrow}

@@ -79,26 +79,16 @@
   margin-bottom: 3.09vw;
 }
 
-.Email a[visible],
-.Github a[visible],
-.Linkedin a[visible],
-.CV a[visible],
-.EmailArrow[visible],
-.GithubArrow[visible],
-.LinkedinArrow[visible],
-.CVArrow[visible] {
+.Invisible {
   display: inline-block;
-  animation: contactGrow 1s 1;
-  transform: translateY(4);
+  transition: transform 0.4s ease-out;
+  transform: translateY(7vw);
 }
 
-@keyframes contactGrow {
-  0% {
-    transform: translateY(4vw);
-  }
-  100% {
-    transform: translateY(0);
-  }
+.Visible {
+  display: inline-block;
+  transition: transform 0.4s ease-out;
+  transform: translateY(0);
 }
 
 .Design {
@@ -129,6 +119,13 @@
   .ContactLinks {
     padding-bottom: 9vw;
     color: white;
+  }
+
+  .Email,
+  .Github,
+  .Linkedin,
+  .CV {
+    margin-bottom: 12vw;
   }
 
   .Email a,
