@@ -18,10 +18,7 @@ const Contact = (props) => {
       id='contact'
       className={styles.Contact + ' secondaryBackground'}
     >
-      <h2
-        mode={props.mode}
-        className={styles.Title + ' secondaryText'}
-      >
+      <h2 mode={props.mode} className={styles.Title + ' secondaryText'}>
         Contact
       </h2>
       <div className={styles.ContactLinks}>
@@ -50,7 +47,7 @@ const Contact = (props) => {
             <a
               className={
                 visible
-                  ? styles.Visible + ' ' + styles.secondaryText
+                  ? styles.Visible + ' secondaryText'
                   : styles.secondaryText + ' ' + styles.Invisible
               }
               mode={props.mode}
@@ -61,16 +58,18 @@ const Contact = (props) => {
               github
             </a>
           </h4>
-          <img
-            className={
-              visible
-                ? styles.Visible + ' ' + styles.GithubArrow
-                : styles.GithubArrow + ' ' + styles.Invisible
-            }
-            mode={props.mode}
-            src={linkArrow}
-            alt=''
-          />
+          <VisibilitySensor onChange={onScrollHandler}>
+            <img
+              className={
+                visible
+                  ? styles.Visible + ' ' + styles.GithubArrow
+                  : styles.GithubArrow + ' ' + styles.Invisible
+              }
+              mode={props.mode}
+              src={linkArrow}
+              alt=''
+            />
+          </VisibilitySensor>
         </div>
         <div className={styles.Linkedin}>
           <h4>
@@ -99,7 +98,7 @@ const Contact = (props) => {
             <a
               className={
                 visible
-                  ? styles.Visible + ' ' + styles.secondaryText
+                  ? styles.Visible + ' secondaryText'
                   : styles.secondaryText + ' ' + styles.Invisible
               }
               mode={props.mode}
@@ -121,19 +120,17 @@ const Contact = (props) => {
             alt=''
           />
         </div>
-        <VisibilitySensor onChange={onScrollHandler}>
-          <p className={styles.Design}>
-            Designed by{' '}
-            <a
-              className={styles.DesignerLink}
-              target='_blank'
-              rel='noopener noreferrer'
-              href='http://barbaraskrodzka.com/'
-            >
-              Barbara Skrodzka
-            </a>
-          </p>
-        </VisibilitySensor>
+        <p className={styles.Design}>
+          Designed by{' '}
+          <a
+            className={styles.DesignerLink}
+            target='_blank'
+            rel='noopener noreferrer'
+            href='http://barbaraskrodzka.com/'
+          >
+            Barbara Skrodzka
+          </a>
+        </p>
       </div>
     </div>
   );

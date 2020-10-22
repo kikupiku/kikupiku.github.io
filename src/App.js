@@ -6,7 +6,7 @@ import Menu from './containers/menu/menu';
 import Skills from './components/skills/skills';
 import Projects from './containers/projects/projects';
 import WhenIDontCode from './components/widwidc/widwidc';
-import Contact from './components/contact/contact';
+import Contact from './containers/contact/contact';
 
 const App = () => {
   const [mode, setMode] = useState('light');
