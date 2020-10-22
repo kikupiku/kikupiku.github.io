@@ -38,7 +38,7 @@ const about = (props) => {
           when needed. That plus my ability to learn quickly has helped me to
           become a creative but also grounded developer (and possibly the only
           person who feels as good about a standing ovation as about getting
-          that bug out, finally!). I hope you enjoy my projects, now cue the curtains!
+          that bug out, finally!). I hope you enjoy my projects. Now, cue the curtains!
         </p>
       </div>
 

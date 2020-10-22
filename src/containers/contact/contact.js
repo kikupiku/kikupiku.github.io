@@ -9,7 +9,6 @@ const Contact = (props) => {
 
   const onScrollHandler = (isVisible) => {
     isVisible ? setVisible(true) : setVisible(false);
-    console.log(visible);
   };
 
   return (

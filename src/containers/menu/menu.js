@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { isMobile } from 'react-device-detect';
 
 import MobileMenu from '../../components/mobileMenu/mobileMenu';
 
@@ -20,6 +21,13 @@ const Menu = (props) => {
   const goToLinkHandler = () => {
     setMobileMenuOpen(false);
   };
+
+  const menuForMobile = isMobile ? <MobileMenu
+          open={mobileMenuOpen}
+          goToLink={goToLinkHandler}
+          mode={props.mode}
+          className={styles.MobileMenu + ' background'}
+        /> : null;
 
   let menuIcon;
   if (props.mode === 'light') {
@@ -103,17 +111,13 @@ const Menu = (props) => {
             </div>
           </li>
           <li className={styles.MenuBurger}>
-            <div onClick={mobileMenuHandler} >
-              <img
-                className={styles.MenuIcon}
-                src={menuIcon}
-                alt=''
-              />
+            <div onClick={mobileMenuHandler}>
+              <img className={styles.MenuIcon} src={menuIcon} alt='' />
             </div>
           </li>
         </ul>
       </div>
-      {mobileMenuOpen ? <MobileMenu goToLink={goToLinkHandler} mode={props.mode} className={styles.MobileMenu + ' background'} /> : null}
+      {menuForMobile}
     </div>
   );
 };
