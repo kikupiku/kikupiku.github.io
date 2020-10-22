@@ -4,17 +4,13 @@ import styles from './mobileMenu.module.css';
 
 const mobileMenu = (props) => {
 
-  console.log(props.open);
   let classes = [styles.MobileMenu];
-
-  if (props.open) {
-    classes.push(styles.MobileMenuOpen);
-  } else {
-    classes.push(styles.MobileMenuClosed)
-  }
+  props.open
+    ? classes.push(styles.MobileMenuOpen)
+    : classes.push(styles.MobileMenuClosed);
   
   return (
-    <div mode={props.mode} className={classes.join(" ")}>
+    <div mode={props.mode} className={classes.join(' ')}>
       <ul className={styles.MenuList}>
         <li>
           <a
