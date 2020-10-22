@@ -13,7 +13,7 @@ const about = (props) => {
           About me
         </h2>
         <p className={styles.Note}>
-          Can an opera singer self-teach themselves to program? This portfolio
+          Can an opera singer teach themself to program? This portfolio
           website can be your answer.
           <br />
           <br />
@@ -21,12 +21,15 @@ const about = (props) => {
           competitions, and having met my spouse in an Opera festival, I felt
           like I had accomplished what I needed to in opera. Also, there were
           many itches that opera simply couldn't scratch. Then I discovered
-          programming. Web development allows me to express my creativity in a more
+          programming. 
+          <br />
+          <br />
+          Web development allows me to express my creativity in a more
           satisfying way, to create with clear structure and to
           focus in on details in a way I've never been able to do before.
           <br />
           <br />
-          Now I am ready to contribute to the world in this new way, and I'm
+          After over a year of study, I am ready to contribute to the world in this new way, and I'm
           looking forward to bringing the best traits of a creative developer
           and focused opera singer to the table. Over my career I have learned
           how to get things done, keep my cool in dire moments (oh, those stage

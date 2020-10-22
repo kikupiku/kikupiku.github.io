@@ -57,38 +57,22 @@ ul {
 
 .ToggleCircle {
   position: absolute;
-  top: 0.18vw;
-  width: 1.5vw;
-  height: 1.5vw;
+  top: 0vw;
+  width: 1.27vw;
+  height: 1.27vw;
   border-radius: 50%;
 }
 
 .ToggleCircle[mode='light'] {
-  left: 0.8vw;
-  animation: moveToggleToLight 0.3s 1;
+  left: 0.7vw;
+  transition: left 0.3s ease-out;
+  border: 0.3vw solid #1B494B;
 }
 
 .ToggleCircle[mode='dark'] {
-  left: -1vw;
-  animation: moveToggleToDark 0.3s 1;
-}
-
-@keyframes moveToggleToDark {
-  0% {
-    left: 0.8vw;
-  }
-  100% {
-    left: -1vw;
-  }
-}
-
-@keyframes moveToggleToLight {
-  0% {
-    left: -1vw;
-  }
-  100% {
-    left: 0.8vw;
-  }
+  left: -1.3vw;
+  transition: left 0.3s ease-out;
+  border: 0.3vw solid #C9D9C2;
 }
 
 .MobileMenu,
@@ -135,18 +119,20 @@ ul {
   }
 
   .ToggleCircle {
-    width: 5.33vw;
-    height: 5.33vw;
-    position: relative;
-    top: -6vw;
+    width: 5vw;
+    height: 5vw;
+    position: absolute;
+    top: 0.3vw;
   }
 
   .ToggleCircle[mode='light'] {
-    left: 5.5vw;
+    left: 5.4vw;
+    border: 0.5vw solid #1B494B;
   }
 
   .ToggleCircle[mode='dark'] {
     left: -0.6vw;
+    border: 0.5vw solid #C9D9C2;
   }
 
   .MenuBurger {
