@@ -79,17 +79,17 @@
   margin-bottom: 3.09vw;
 }
 
-.Email a,
-.Github a,
-.Linkedin a,
-.CV a,
-.EmailArrow,
-.GithubArrow,
-.LinkedinArrow,
-.CVArrow {
+.Email a[visible],
+.Github a[visible],
+.Linkedin a[visible],
+.CV a[visible],
+.EmailArrow[visible],
+.GithubArrow[visible],
+.LinkedinArrow[visible],
+.CVArrow[visible] {
   display: inline-block;
   animation: contactGrow 1s 1;
-  transform: translateY(0);
+  transform: translateY(4);
 }
 
 @keyframes contactGrow {

@@ -12,6 +12,7 @@
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.3",
     "react-swipeable": "^5.5.1",
+    "react-visibility-sensor": "^5.1.1",
     "regenerator-runtime": "^0.13.7"
   },
   "scripts": {

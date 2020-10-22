@@ -1,9 +1,17 @@
-import React from 'react';
+import React, { useState } from 'react';
+import VisibilitySensor from 'react-visibility-sensor';
 
 import styles from './contact.module.css';
 import linkArrow from '../../assets/linkArrow.svg';
 
-const contact = props => {
+const Contact = (props) => {
+  const [visible, setVisible] = useState(false);
+
+  const onScrollHandler = (isVisible) => {
+    isVisible ? setVisible(false) : setVisible(true);
+    console.log(visible);
+  };
+
   return (
     <div
       mode={props.mode}
@@ -16,19 +24,28 @@ const contact = props => {
       <div className={styles.ContactLinks}>
         <div className={styles.Email}>
           <h4>
-            <a href='mailto:kml.wilk@gmail.com'>kml.wilk@gmail.com</a>
+            <a
+              className={visible ? styles.Visible : null}
+              href='mailto:kml.wilk@gmail.com'
+            >
+              kml.wilk@gmail.com
+            </a>
           </h4>
           <img
             mode={props.mode}
             src={linkArrow}
-            className={styles.EmailArrow}
+            className={
+              styles.EmailArrow + ' ' + visible ? styles.Visible : null
+            }
             alt=''
           />
         </div>
         <div className={styles.Github}>
           <h4>
             <a
-              className='secondaryText'
+              className={
+                visible ? styles.Visible + ' secondaryText' : 'secondaryText'
+              }
               mode={props.mode}
               target='_blank'
               rel='noopener noreferrer'
@@ -38,8 +55,12 @@ const contact = props => {
             </a>
           </h4>
           <img
+            className={
+              visible
+                ? styles.Visible + ' ' + styles.GithubArrow
+                : styles.GithubArrow
+            }
             mode={props.mode}
-            className={styles.GithubArrow}
             src={linkArrow}
             alt=''
           />
@@ -47,6 +68,7 @@ const contact = props => {
         <div className={styles.Linkedin}>
           <h4>
             <a
+              className={visible ? styles.Visible : null}
               target='_blank'
               rel='noopener noreferrer'
               href='https://www.linkedin.com/in/katarzyna-kaswen-wilk-bb14081b7/'
@@ -55,8 +77,13 @@ const contact = props => {
             </a>
           </h4>
           <img
+            className={
+              visible
+                ? styles.Visible + ' ' + styles.LinkedinArrow
+                : styles.LinkedinArrow
+            }
             mode={props.mode}
-            className={styles.LinkedinArrow}
+            className={}
             src={linkArrow}
             alt=''
           />
@@ -64,6 +91,7 @@ const contact = props => {
         <div className={styles.CV}>
           <h4>
             <a
+              className={visible ? styles.Visible : null}
               className='secondaryText'
               mode={props.mode}
               target='_blank'
@@ -74,26 +102,30 @@ const contact = props => {
             </a>
           </h4>
           <img
+            className={
+              visible ? styles.Visible + ' ' + styles.CVArrow : styles.CVArrow
+            }
             mode={props.mode}
-            className={styles.CVArrow}
             src={linkArrow}
             alt=''
           />
         </div>
-        <p className={styles.Design}>
-          Designed by{' '}
-          <a
-            className={styles.DesignerLink}
-            target='_blank'
-            rel='noopener noreferrer'
-            href='http://barbaraskrodzka.com/'
-          >
-            Barbara Skrodzka
-          </a>
-        </p>
+        <VisibilitySensor onChange={onScrollHandler}>
+          <p className={styles.Design}>
+            Designed by{' '}
+            <a
+              className={styles.DesignerLink}
+              target='_blank'
+              rel='noopener noreferrer'
+              href='http://barbaraskrodzka.com/'
+            >
+              Barbara Skrodzka
+            </a>
+          </p>
+        </VisibilitySensor>
       </div>
     </div>
   );
 };
 
-export default contact;
+export default Contact;
