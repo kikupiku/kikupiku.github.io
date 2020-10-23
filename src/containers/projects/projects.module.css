@@ -95,15 +95,15 @@
   }
   80% {
     transform: rotate(-19.07deg);
-    left: -8.5vw;
-    top: 18.5vw;
+    left: -8.8vw;
+    top: 9.1vw;
     width: 26.5vw;
     height: 26.5vw;
   }
   100% {
     transform: rotate(-19.07deg);
-    left: -8.5vw;
-    top: 18.5vw;
+    left: -8.8vw;
+    top: 9.1vw;
     width: 26.5vw;
     height: 26.5vw;
   }
@@ -282,14 +282,14 @@
   80% {
     transform: rotate(19.07deg);
     right: -13.5vw;
-    top: 19vw;
+    top: 9vw;
     width: 26.5vw;
     height: 26.5vw;
   }
   100% {
     transform: rotate(19.07deg);
     right: -13.5vw;
-    top: 19vw;
+    top: 9vw;
     width: 26.5vw;
     height: 26.5vw;
   }
@@ -383,6 +383,8 @@
 
   .ProjGifs {
   display: flex;
+  position: relative;
+  left: 1vw;
   height: 62.36vw;
   margin-top: 10.6vw;
   margin-bottom: 7.77vw;
@@ -437,7 +439,7 @@
     100% {
       transform: rotate(-19.07deg);
       left: -35vw;
-      top: 45.5vw;
+      top: 21vw;
       width: 39.2vw;
       height: 39.2vw;
     }
@@ -557,7 +559,7 @@
     100% {
       transform: rotate(19.07deg);
       right: -36vw;
-      top: 46vw;
+      top: 21vw;
       width: 39.2vw;
       height: 39.2vw;
     }
