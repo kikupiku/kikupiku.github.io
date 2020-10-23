@@ -68,19 +68,19 @@
 }
 
 .EarlierProj[goforward='1'] {
-  animation: earlGoForward 0.5s 1;
+  animation: earlGoForward 0.6s 1;
 }
 
 .PrevProj[goforward='1'] {
-  animation: prevGoForward 0.5s 1;
+  animation: prevGoForward 0.6s 1;
 }
 
 .CurrentProj[goforward='1'] {
-  animation: currGoForward 0.5s 1;
+  animation: currGoForward 0.6s 1;
 }
 
 .NextProj[goforward='1'] {
-  animation: nextGoForward 0.5s 1;
+  animation: nextGoForward 0.6s 1;
 }
 
 @keyframes earlGoForward {
@@ -90,6 +90,13 @@
     top: 40vw;
     width: 13.5vw;
     height: 13.5vw;
+  }
+  80% {
+    transform: rotate(-19.07deg);
+    left: -8.5vw;
+    top: 18.5vw;
+    width: 26.5vw;
+    height: 26.5vw;
   }
   100% {
     transform: rotate(-19.07deg);
@@ -108,6 +115,13 @@
     width: 26.5vw;
     height: 26.5vw;
   }
+  80% {
+    transform: rotate(0);
+    right: -26vw;
+    top: 0;
+    width: 38.2vw;
+    height: 38.2vw;
+  }
   100% {
     transform: rotate(0);
     right: -26vw;
@@ -124,6 +138,13 @@
     left: 0vw;
     top: 0vw;
     transform: rotate(0);
+  }
+  80% {
+    width: 26.5vw;
+    height: 26.5vw;
+    left: 35vw;
+    top: 9vw;
+    transform: rotate(18.07deg);
   }
   100% {
     width: 26.5vw;
@@ -142,6 +163,13 @@
     width: 26.5vw;
     height: 26.5vw;
   }
+  80% {
+    transform: rotate(36.07deg);
+    left: 40vw;
+    top: 20vw;
+    width: 13.5vw;
+    height: 13.5vw;
+  }
   100% {
     transform: rotate(36.07deg);
     left: 40vw;
@@ -152,19 +180,19 @@
 }
 
 .PrevProj[goback='1'] {
-  animation: prevGoBack 0.5s 1;
+  animation: prevGoBack 0.6s 1;
 }
 
 .CurrentProj[goback='1'] {
-  animation: currGoBack 0.5s 1;
+  animation: currGoBack 0.6s 1;
 }
 
 .NextProj[goback='1'] {
-  animation: nextGoBack 0.5s 1;
+  animation: nextGoBack 0.6s 1;
 }
 
 .LaterProj[goback='1'] {
-  animation: latrGoBack 0.5s 1;
+  animation: latrGoBack 0.6s 1;
 }
 
 @keyframes prevGoBack {
@@ -175,6 +203,13 @@
     top: 9vw;
     width: 26.5vw;
     height: 26.5vw;
+  }
+  80% {
+    transform: rotate(-36.07deg);
+    right: 40vw;
+    top: 25vw;
+    width: 13.5vw;
+    height: 13.5vw;
   }
   100% {
     transform: rotate(-36.07deg);
@@ -192,6 +227,13 @@
     left: 0vw;
     top: 0vw;
     transform: rotate(0);
+  }
+  80% {
+    width: 26.5vw;
+    height: 26.5vw;
+    left: -22.5vw;
+    top: 9vw;
+    transform: rotate(-18.07deg);
   }
   100% {
     width: 26.5vw;
@@ -211,6 +253,13 @@
     width: 26.5vw;
     height: 26.5vw;
   }
+  80% {
+    transform: rotate(0);
+    left: -14vw;
+    top: 0;
+    width: 38.5vw;
+    height: 38.5vw;
+  }
   100% {
     transform: rotate(0);
     left: -14vw;
@@ -227,6 +276,13 @@
     right: -25vw;
     width: 13.5vw;
     height: 13.5vw;
+  }
+  80% {
+    transform: rotate(19.07deg);
+    right: -13.5vw;
+    top: 19vw;
+    width: 26.5vw;
+    height: 26.5vw;
   }
   100% {
     transform: rotate(19.07deg);

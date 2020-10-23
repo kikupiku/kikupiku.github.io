@@ -47,7 +47,7 @@ const Projects = (props) => {
         newLater = myProjects[i + 1];
       }
       setLaterProject(newLater);
-    }, 500);
+    }, 580);
   };
 
   const onNextHandler = () => {
@@ -69,7 +69,7 @@ const Projects = (props) => {
         newEarlier = myProjects[i - 1];
       }
       setEarlierProject(newEarlier);
-    }, 500);
+    }, 580);
   };
 
   const config = {

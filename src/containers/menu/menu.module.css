@@ -72,13 +72,13 @@ ul {
 .ToggleCircle[mode='light'] {
   left: 0.7vw;
   transition: left 0.3s ease-out;
-  border: 0.3vw solid #1B494B;
+  border: 0.3vw solid #1b494b;
 }
 
 .ToggleCircle[mode='dark'] {
   left: -1.3vw;
   transition: left 0.3s ease-out;
-  border: 0.3vw solid #C9D9C2;
+  border: 0.3vw solid #c9d9c2;
 }
 
 .MobileMenu,
@@ -123,28 +123,144 @@ ul {
 
   .ToggleCircle[mode='light'] {
     left: 5.4vw;
-    border: 0.5vw solid #1B494B;
+    border: 0.5vw solid #1b494b;
   }
 
   .ToggleCircle[mode='dark'] {
     left: -0.6vw;
-    border: 0.5vw solid #C9D9C2;
+    border: 0.5vw solid #c9d9c2;
   }
 
-  .MenuBurger {
+  .MenuBurgerContainer {
+    width: 6.4vw;
+    height: 6.4vw;
     display: inline-block;
     transform: all 1s ease-out;
     margin-left: 5vw;
     position: relative;
-    top: 0.5vw;
   }
 
-  .MenuBurger::before {
+  .MenuBurgerContainer::before {
     content: '';
     position: absolute;
-    height: 6.4vw;
+    height: 6.8vw;
     border-left: 2px solid rgba(27, 73, 75, 0.22);
     right: 9vw;
-    top: -0.5vw;
+    top: -0.2vw;
+  }
+
+  /*!
+ * Hamburgers
+ * @description Tasty CSS-animated hamburgers
+ * @author Jonathan Suh @jonsuh
+ * @site https://jonsuh.com/hamburgers
+ * @link https://github.com/jonsuh/hamburgers
+ */
+  .hamburger {
+    display: inline-block;
+    cursor: pointer;
+    transition-property: filter;
+    transition-duration: 0.15s;
+    transition-timing-function: linear;
+    font: inherit;
+    color: inherit;
+    text-transform: none;
+    background-color: transparent;
+    border: 0;
+    margin: 0;
+    overflow: visible;
+  }
+
+  .hamburger.isActive .hamburgerInner[mode='light'],
+  .hamburger.isActive .hamburgerInner[mode='light']::before,
+  .hamburger.isActive .hamburgerInner[mode='light']::after {
+    background-color: #1b494b;
+  }
+  .hamburger.isActive .hamburgerInner[mode='dark'],
+  .hamburger.isActive .hamburgerInner[mode='dark']::before,
+  .hamburger.isActive .hamburgerInner[mode='dark']::after {
+    background-color: #c9d9c2;
+  }
+
+  .hamburgerBox {
+    width: 7.5vw;
+    height: 6vw;
+    display: inline-block;
+    position: relative;
+  }
+
+  .hamburgerInner {
+    display: block;
+    margin-top: -0.5vw;
+  }
+
+  .hamburgerInner,
+  .hamburgerInner::before,
+  .hamburgerInner::after {
+    width: 7.5vw;
+    height: 1vw;
+    border-radius: 4px;
+    position: absolute;
+    transition-property: transform;
+    transition-duration: 0.15s;
+    transition-timing-function: ease;
+  }
+
+  .hamburgerInner[mode='light'],
+  .hamburgerInner[mode='light']::before,
+  .hamburgerInner[mode='light']::after {
+    background-color: #1b494b;
+  }
+  .hamburgerInner[mode='dark'],
+  .hamburgerInner[mode='dark']::before,
+  .hamburgerInner[mode='dark']::after {
+    background-color: #c9d9c2;
+  }
+
+  .hamburgerInner::before,
+  .hamburgerInner::after {
+    content: '';
+    display: block;
+  }
+  .hamburgerInner::before {
+    top: -2vw;
+  }
+  .hamburgerInner::after {
+    bottom: -2vw;
+  }
+
+  /*
+   * Spring
+   */
+  .hamburgerSpring .hamburgerInner {
+    top: 0.5vw;
+    transition: background-color 0s 0.13s linear;
+  }
+  .hamburgerSpring .hamburgerInner::before {
+    top: 10px;
+    transition: top 0.1s 0.2s cubic-bezier(0.33333, 0.66667, 0.66667, 1),
+      transform 0.13s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  }
+  .hamburgerSpring .hamburgerInner::after {
+    top: 20px;
+    transition: top 0.2s 0.2s cubic-bezier(0.33333, 0.66667, 0.66667, 1),
+      transform 0.13s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  }
+
+  .hamburgerSpring.isActive .hamburgerInner {
+    transition-delay: 0.22s;
+    background-color: transparent !important;
+  }
+  .hamburgerSpring.isActive .hamburgerInner::before {
+    top: 0;
+    transition: top 0.1s 0.15s cubic-bezier(0.33333, 0, 0.66667, 0.33333),
+      transform 0.13s 0.22s cubic-bezier(0.215, 0.61, 0.355, 1);
+    transform: translate3d(0, 10px, 0) rotate(45deg);
+  }
+  .hamburgerSpring.isActive .hamburgerInner::after {
+    top: 0;
+    transition: top 0.2s cubic-bezier(0.33333, 0, 0.66667, 0.33333),
+      transform 0.13s 0.22s cubic-bezier(0.215, 0.61, 0.355, 1);
+    transform: translate3d(0, 10px, 0) rotate(-45deg);
   }
 }
