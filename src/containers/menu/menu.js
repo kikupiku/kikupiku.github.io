@@ -5,10 +5,6 @@ import { Swipeable } from 'react-swipeable';
 import MobileMenu from '../../components/mobileMenu/mobileMenu';
 
 import styles from './menu.module.css';
-// import burgerMenuOpen from '../../assets/burgerMenuOpen.svg';
-// import burgerMenuClosed from '../../assets/burgerMenuClosed.svg';
-// import burgerMenuOpenDark from '../../assets/burgerMenuOpenDark.svg';
-// import burgerMenuClosedDark from '../../assets/burgerMenuClosedDark.svg';
 
 const Menu = (props) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -34,19 +30,10 @@ const Menu = (props) => {
     </Swipeable>
   ) : null;
 
-  // let menuIcon;
-  // if (props.mode === 'light') {
-  //   menuIcon = mobileMenuOpen ? burgerMenuOpen : burgerMenuClosed;
-  // } else {
-  //   menuIcon = mobileMenuOpen ? burgerMenuOpenDark : burgerMenuClosedDark;
-  // }
-
   let classes = [styles.hamburger, styles.hamburgerSpring];
   if (mobileMenuOpen) {
     classes.push(styles.isActive);
   }
-
-  console.log('classes: ', classes.join(' '));
 
   return (
     <div mode={props.mode} className={styles.Container + ' background'}>
@@ -132,10 +119,6 @@ const Menu = (props) => {
                 <div mode={props.mode} class={styles.hamburgerInner}></div>
               </div>
             </div>
-            {/* <div className={classes.join(' ')} onClick={mobileMenuHandler}>
-              <img className={styles.MenuIcon} src={menuIcon} alt='' />
-              <div></div>
-            </div> */}
           </li>
         </ul>
       </div>

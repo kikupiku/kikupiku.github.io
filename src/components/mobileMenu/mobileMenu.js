@@ -8,8 +8,6 @@ const mobileMenu = (props) => {
   props.open
     ? classes.push(styles.MobileMenuOpen)
     : classes.push(styles.MobileMenuClosed);
-
-  console.log('mobileclases: ', classes);
   
   return (
     <div mode={props.mode} className={classes.join(' ')}>
