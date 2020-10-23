@@ -14,7 +14,7 @@ function gatherImages(skillNames, images, type) {
   skillNames.forEach((skill, index) => {
     images.push({
       id: index + 1,
-      source: process.env.PUBLIC_URL + `skills/${type}/${skill}.png`,
+      source: process.env.PUBLIC_URL + `/skills/${type}/${skill}.png`,
       name: skill
     });
   });
