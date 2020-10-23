@@ -116,7 +116,7 @@ const Menu = (props) => {
               onClick={mobileMenuHandler}
             >
               <div mode={props.mode} className={styles.hamburgerBox}>
-                <div mode={props.mode} class={styles.hamburgerInner}></div>
+                <div mode={props.mode} className={styles.hamburgerInner}></div>
               </div>
             </div>
           </li>
