@@ -1,6 +1,6 @@
 const frontend = ['html5', 'css3', 'javascript', 'sass', 'bootstrap', 'pug', 'react', 'redux', 'next'];
 const backend = ['nodejs', 'express', 'mongodb', 'mongoose', 'passportjs', 'firebase', 'cloudinary'];
-const other = ['git', 'npm', 'webpack', 'heroku', 'github', 'jest'];
+const other = ['git', 'npm', 'webpack', 'heroku', 'github', 'jest', 'jasmine'];
 
 export const frontendImages = [];
 export const backendImages = [];
