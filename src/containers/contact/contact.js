@@ -103,7 +103,7 @@ const Contact = (props) => {
               mode={props.mode}
               target='_blank'
               rel='noopener noreferrer'
-              href='https://visualcv.com/kkaswen-wilk/'
+              href='https://my.visualcv.com/kkaswen-wilk/'
             >
               resume
             </a>
